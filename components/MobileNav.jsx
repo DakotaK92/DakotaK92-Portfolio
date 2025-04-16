@@ -53,7 +53,7 @@ const MobileNav = () => {
                         // fix border accent color
                         className={`${
                             link.path === pathname &&
-                            "text-amber-400 border-b-2 border-accent"
+                            "text-amber-400 border-b-2"
                         } text-xl capitalize hover:text-amber-400 transition-all`}
                     >
                         {link.name}
