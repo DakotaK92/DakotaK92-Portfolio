@@ -66,7 +66,7 @@ const experience = {
     {
       company: "FASTSIGNS - Lakeland, FL",
       position: "Graphic Design and Production",
-      duration: "Present - March 2025",
+      duration: "March 2025 - Present",
     },
     {
       company: "FASTSIGN - Carrollton, TX",
@@ -76,17 +76,17 @@ const experience = {
     {
       company: "Signarama - McKinney, TX",
       position: "Graphic Design and Production",
-      duration: "Jan 2022 - Present",
+      duration: "May 2021 - August 2021",
     },
     {
-      company: "Amazon Delivery Driver - Mesquite, TX",
-      position: "Frontend Developer",
-      duration: "Jan 2022 - Present",
+      company: "Amazon - Mesquite, TX",
+      position: "Delivery Driver",
+      duration: "November 2020 - April 2021",
     },
     {
-      company: "Target: Tech Associate - Rockwall, TX",
-      position: "Frontend Developer",
-      duration: "Jan 2022 - Present",
+      company: "Target - Rockwall, TX",
+      position: "Tech Associate",
+      duration: "Marck 2016 - November 2020",
     },
   ],
 };
@@ -193,7 +193,7 @@ const Resume = () => {
                             <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
                             <div className="flex items-center gap-3">
                               {/* dot */}
-                              <span className="w-[60px] h-[6px] rounded-full bg-amber-400"></span>
+                              <span className="w-[40px] h-[6px] rounded-full bg-amber-400"></span>
                               <p className="text-white/60">{item.company}</p>
                             </div>
                           </li>
@@ -218,7 +218,7 @@ const Resume = () => {
                             <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
                             <div className="flex items-center gap-3">
                               {/* dot */}
-                              <span className="w-[60px] h-[6px] rounded-full bg-amber-400"></span>
+                              <span className="w-[40px] h-[6px] rounded-full bg-amber-400"></span>
                               <p className="text-white/60">{item.institution}</p>
                             </div>
                           </li>
