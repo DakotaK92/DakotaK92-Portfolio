@@ -5,6 +5,7 @@ import { Button } from "./ui/button"
 import Nav from "./Nav"
 import MobileNav from "./MobileNav"
 
+import Image from "/assets/king-crown.png"
 
 const Header = () => {
   return (
@@ -12,9 +13,10 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
-        <h1 className="text-4xl font-semibold">
+          <Image src={Image}/>
+        {/*<h1 className="text-4xl font-semibold">
           Dakota<span className="text-amber-400">.</span>
-        </h1>
+        </h1>*/}
         </Link>
         {/* desktop nav & hire me button */}
         <div className="hidden xl:flex items-center gap-8">

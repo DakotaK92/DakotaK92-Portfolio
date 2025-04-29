@@ -27,11 +27,10 @@ const Photo = () => {
               src="/assets/photo.png"
               priority 
               quality={100}
-              fill alt='Pickture of me' 
+              fill alt='Picture of me'
               className="object-contain"
             />
         </motion.div>
-        {/* Circle try and go for a triangle instead */}
         <motion.svg 
           className="w-[300px] h-[300px] xl:w-[506px] xl:h-[506px]"
           fill="transparent"
@@ -39,7 +38,7 @@ const Photo = () => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <motion.polygon
-            points="253,3 503,503 3,503"
+            points="126.5,1.5 251.5,251.5 1.5,251.5"
             stroke="oklch(82.8% 0.189 84.429)" 
             strokeWidth="4"
             fill="transparent"
@@ -53,25 +52,6 @@ const Photo = () => {
               repeatType: "reverse",
             }}
           />
-          {/*<motion.circle
-            cx="253" 
-            cy="253" 
-            r="250" 
-            stroke="oklch(82.8% 0.189 84.429)" 
-            strokeWidth="4"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            initial={{strokeDasharray: "24 10 0 0"}}
-            animate={{
-              strokeDasharray:["24 120 25 25","16 25 92 72","4 250 22 22"],
-              rotate: [120, 360],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }}
-          />*/}
         </motion.svg>
       </motion.div>
     </div>

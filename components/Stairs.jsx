@@ -21,7 +21,6 @@ const reverseIndex = (index) => {
 const Stairs = () => {
   return (
     <>
-      {/* have 3 stairs/ not 6 */}
       {[...Array(5)].map((_, index) => {
         return (
             <motion.div 

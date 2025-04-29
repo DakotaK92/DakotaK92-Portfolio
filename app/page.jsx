@@ -14,12 +14,14 @@ export default function Home() {
           {/* text */} 
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl">Graphic Designer and <br />Full Stack Developer</span>
-            <h1 className="h1 mb-6">Hello I'm <br /> <span className="text-amber-400">Dakota K</span></h1>
+            <h1 className="h1 mb-6">Hello! I'm <br /> <span className="text-amber-400">Dakota King</span></h1>
             <p className="max-w-[500px] mb-9 text-white/80">I excel at crafting a elegant digital experiences and I am proficient in various programing languages and technologies</p>
             {/* button and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button size="lg" className="uppercase flex items-center gap-2">
-                <span>Download my Resume</span>
+                <a href="./public/assets/resume/Dakota King-Resume 2025" className="flex items-center gap-2"></a>
+                  <span>Download my Resume</span>
+                {/*<span>Download my Resume</span>*/}
                 <FiDownload className="text-xl"/>
               </Button>
               <div className="mb-8 xl:mb-0">

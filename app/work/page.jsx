@@ -28,8 +28,8 @@ const projects = [
     title: "Project One",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     stack: [{name: "Next.js"}, {name: "Tailwind CSS"}, {name: "Javascript"}],
-    image: "",
-    github: "",
+    image: "/assets/work/Project 1.png",
+    github: "https://github.com/DakotaK92/Challenge-20-React-Portfolio",
     live: "",
   },
   {
@@ -38,8 +38,8 @@ const projects = [
     title: "Project Two",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     stack: [{name: "Next.js"}, {name: "Tailwind CSS"}, {name: "Javascript"}],
-    image: "",
-    github: "",
+    image: "/assets/work/Project 2.png",
+    github: "https://github.com/DakotaK92/myPocketBard",
     live: "",
   },
   {
@@ -48,8 +48,8 @@ const projects = [
     title: "Project Three",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     stack: [{name: "Next.js"}, {name: "Tailwind CSS"}, {name: "Javascript"}],
-    image: "",
-    github: "",
+    image: "/assets/work/Project 3.png",
+    github: "https://github.com/DakotaK92/DakotaK92-Portfolio",
     live: "",
   },
 ]
@@ -142,7 +142,7 @@ const Work = () => {
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                    <div className="h-[460px] relative group flex justify-center items-center bg-blue-950 border-2 border-yellow-400">
                       {/* overlay */}
                       <div className="absolute top-0 bottom-0 w-full h-full bg-blue-500/10 z-10"></div>
                       {/* image */}
@@ -150,7 +150,7 @@ const Work = () => {
                         <Image 
                           src={project.image} 
                           fill 
-                          className="object-cover" 
+                          className="object-contain" 
                           alt='' 
                         />
                       </div>

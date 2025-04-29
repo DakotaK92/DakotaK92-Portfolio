@@ -25,8 +25,8 @@ const services = [
   },
   {
     num: "04",
-    title: "*Filler*",
-    description: "*Filler*",
+    title: "Logo Design",
+    description: "I design unique and memorable logos that represent your brand identity.",
     href: '',
   }
 ]
