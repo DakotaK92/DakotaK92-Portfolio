@@ -18,12 +18,16 @@ export default function Home() {
             <p className="max-w-[500px] mb-9 text-white/80">I excel at crafting a elegant digital experiences and I am proficient in various programing languages and technologies</p>
             {/* button and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button size="lg" className="uppercase flex items-center gap-2">
-                <a href="./public/assets/resume/Dakota King-Resume 2025" className="flex items-center gap-2"></a>
-                  <span>Download my Resume</span>
-                {/*<span>Download my Resume</span>*/}
+            <Button size="lg" className="uppercase flex items-center gap-2">
+              <a 
+                href="/assets/resume/Dakota King-Resume 2025.pdf" 
+                download 
+                className="flex items-center gap-2"
+              >
+                <span>Download my Resume</span>
                 <FiDownload className="text-xl"/>
-              </Button>
+              </a>
+            </Button>
               <div className="mb-8 xl:mb-0">
                 <Social 
                 containerStyles="flex gap-6" 

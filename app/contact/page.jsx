@@ -72,6 +72,7 @@ const Contact = () => {
                     <SelectLabel>Select a Service</SelectLabel>
                     <SelectItem value="est">Web Development</SelectItem>
                     <SelectItem value="cst">UI/UX Design</SelectItem>
+                    <SelectItem value="gcd">Graphic Design</SelectItem>
                     <SelectItem value="mst">Logo Design</SelectItem>
                   </SelectGroup>
                 </SelectContent>
@@ -82,7 +83,13 @@ const Contact = () => {
                 placeholder="Type your message here."
               />
               {/* button */}
-              <Button size="md" className="max-w-40">
+              <Button
+                size="md"
+                className="max-w-40"
+                onClick={() => {
+                  window.location.href = `mailto:dakotaking92@gmail.com?subject=Contact Inquiry&body=Hi Dakota,`;
+                }}
+              > 
                 Send message
               </Button>
             </form>

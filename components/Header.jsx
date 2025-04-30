@@ -5,19 +5,20 @@ import { Button } from "./ui/button"
 import Nav from "./Nav"
 import MobileNav from "./MobileNav"
 
-import Image from "/assets/king-crown.png"
-
 const Header = () => {
   return (
     <header className="py-8 xl:py-12 text-white">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <Link href="/">
+        <a href="/">
+                <img src="/assets/king-crown.png" className="w-75 h-auto"/>
+        </a>
+        {/*<Link href="/">
           <Image src={Image}/>
-        {/*<h1 className="text-4xl font-semibold">
+        <h1 className="text-4xl font-semibold">
           Dakota<span className="text-amber-400">.</span>
-        </h1>*/}
-        </Link>
+        </h1>
+        </Link>*/}
         {/* desktop nav & hire me button */}
         <div className="hidden xl:flex items-center gap-8">
         <Nav />
