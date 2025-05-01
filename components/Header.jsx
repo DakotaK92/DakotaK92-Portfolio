@@ -13,12 +13,6 @@ const Header = () => {
         <a href="/">
                 <img src="/assets/king-crown.png" className="w-75 h-auto"/>
         </a>
-        {/*<Link href="/">
-          <Image src={Image}/>
-        <h1 className="text-4xl font-semibold">
-          Dakota<span className="text-amber-400">.</span>
-        </h1>
-        </Link>*/}
         {/* desktop nav & hire me button */}
         <div className="hidden xl:flex items-center gap-8">
         <Nav />

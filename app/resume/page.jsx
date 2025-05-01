@@ -21,35 +21,35 @@ const about = {
     "I'm a passionate web developer with a knack for creating dynamic and responsive web applications. I love exploring new technologies and continuously improving my skills.",
   info: [
     {
-      fieldName: "Name",
+      fieldName: "Name:",
       fieldValue: "Dakota K",
     },
     {
-      fieldName: "Phone",
+      fieldName: "Phone:",
       fieldValue: "972-765-2528",
     },
     {
-      fieldName: "Experience",
+      fieldName: "Experience:",
       fieldValue: "2 Years",
     },
     {
-      fieldName: "Country",
+      fieldName: "Country:",
       fieldValue: "USA",
     },
     {
-      fieldName: "State",
-      fieldValue: "Floida",
+      fieldName: "State:",
+      fieldValue: "Florida",
     },
     {
-      fieldName: "Email",
+      fieldName: "Email:",
       fieldValue: "dakotaking92@gmail.com",
     },
     {
-      fieldName: "Freelance",
+      fieldName: "Freelance:",
       fieldValue: "Available",
     },
     {
-      fieldName: "Language",
+      fieldName: "Language:",
       fieldValue: "English",
     },
   ],
