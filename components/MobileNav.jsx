@@ -35,13 +35,13 @@ const MobileNav = () => {
       <SheetTrigger className="flex justify-center items-center md:hidden">
         <CiMenuFries className="text-[32px] text-amber-400"/>
       </SheetTrigger>
-      <SheetContent className="flex flex-col p-6 sm:p-6 md:p-10 lg:p-12">
+      <SheetContent className="flex flex-col">
         {/* logo */}
         <a href="/" className='flex justify-center'>
-            <img src="/assets/king-crown.png" className="w-[60px] sm:w-[75px] h-auto px-4 sm:px-6 md:px-10 mt-8 sm:mt-12 md:mt-16 mb-6 sm:mb-8 md:mb-10"/>
+            <img src="/assets/king-crown.png" className="flex p-20"/>
         </a>
         {/* nav */}
-        <nav className='flex flex-col justify-center items-center gap-4 sm:gap-6 md:gap-8'>
+        <nav className='flex flex-col justify-center items-center gap-4 p-4'>
             {links.map((link, index) => {
                 return (
                     <Link 
