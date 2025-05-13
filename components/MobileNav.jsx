@@ -32,13 +32,13 @@ const MobileNav = () => {
     const pathname = usePathname();
   return (
     <Sheet>
-      <SheetTrigger className="flex justify-center items-center md:hidden">
+      <SheetTrigger className="flex justify-center items-center md:hidden p-2">
         <CiMenuFries className="text-[32px] text-amber-400"/>
       </SheetTrigger>
-      <SheetContent className="flex flex-col">
+      <SheetContent className="flex flex-col p-2">
         {/* logo */}
         <a href="/" className='flex justify-center'>
-            <img src="/assets/king-crown.png" className="flex p-20"/>
+            <img src="/assets/king-crown.png" className="flex p-6"/>
         </a>
         {/* nav */}
         <nav className='flex flex-col justify-center items-center gap-4 p-4'>
