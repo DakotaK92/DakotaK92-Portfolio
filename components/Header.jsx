@@ -11,7 +11,7 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <a href="/">
-                <img src="/assets/king-crown.png" className="w-75 h-auto"/>
+          <img src="/assets/king-crown.png" className="w-75 h-auto"/>
         </a>
         {/* desktop nav & hire me button */}
         <div className="hidden xl:flex items-center gap-8">
