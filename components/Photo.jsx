@@ -37,21 +37,7 @@ const Photo = () => {
           viewBox="0 0 300 300"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <motion.polygon
-            points="126.5,1.5 251.5,251.5 1.5,251.5"
-            stroke="oklch(82.8% 0.189 84.429)" 
-            strokeWidth="4"
-            fill="transparent"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1, rotate: [0, 360] }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }}
-          />
+          <motion.polygon/>
         </motion.svg>
       </motion.div>
     </div>

@@ -25,10 +25,6 @@ const about = {
       fieldValue: "Dakota K",
     },
     {
-      fieldName: "Phone:",
-      fieldValue: "972-765-2528",
-    },
-    {
       fieldName: "Experience:",
       fieldValue: "2 Years",
     },
@@ -66,10 +62,10 @@ const experience = {
     {
       company: "FASTSIGNS - Lakeland, FL",
       position: "Graphic Design and Production",
-      duration: "March 2025 - Present",
+      duration: "March 2025 - September 2025",
     },
     {
-      company: "FASTSIGN - Carrollton, TX",
+      company: "FASTSIGNS - Carrollton, TX",
       position: "Graphic Design and Production",
       duration: "Sep 2022 - March 2025",
     },
@@ -80,7 +76,7 @@ const experience = {
     },
     {
       company: "Amazon - Mesquite, TX",
-      position: "Delivery Driver",
+      position: "Package Handler at Amazon",
       duration: "November 2020 - April 2021",
     },
     {
@@ -114,7 +110,7 @@ const education = {
 const skills = {
   title: "My Skills",
   description:
-    "I have a diverse skill set that includes both technical and soft skills. Here are some of the key skills I possess:",
+    "I have a diverse skill set that includes both technical and soft skills. Here are some of the key skills I carry:",
     skillList: [
       {
         icon: <FaHtml5 />,
@@ -172,10 +168,10 @@ const Resume = () => {
         <div className="container mx-auto">
           <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px]">
             <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0">
-              <TabsTrigger value="experience">Experience</TabsTrigger>
-              <TabsTrigger value="education">Education</TabsTrigger>
-              <TabsTrigger value="skills">Skills</TabsTrigger>
-              <TabsTrigger value="about">About me</TabsTrigger>
+              <TabsTrigger value="experience" className="cursor-pointer">Experience</TabsTrigger>
+              <TabsTrigger value="education" className="cursor-pointer">Education</TabsTrigger>
+              <TabsTrigger value="skills" className="cursor-pointer">Skills</TabsTrigger>
+              <TabsTrigger value="about" className="cursor-pointer">About me</TabsTrigger>
             </TabsList>
             {/* content */}
             <div className="min-h-[70vh] w-full">

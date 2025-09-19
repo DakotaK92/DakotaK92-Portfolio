@@ -20,7 +20,7 @@ import {
   {
     icon: <FaPhoneAlt />,
     title: "Phone",
-    description: "972-765-2528",
+    
   },
   {
     icon: <FaEnvelope />,
