@@ -18,11 +18,6 @@ import {
 
  const info = [
   {
-    icon: <FaPhoneAlt />,
-    title: "Phone",
-    
-  },
-  {
     icon: <FaEnvelope />,
     title: "Email",
     description: "dakotaking92@gmail.com",
@@ -46,7 +41,7 @@ const Contact = () => {
       }}
       className="py-6"
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto p-4">
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* form */}
           <div className="xl:w-[54%] order-2 xl:order-none ">

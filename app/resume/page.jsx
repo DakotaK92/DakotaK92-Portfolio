@@ -166,7 +166,7 @@ const Resume = () => {
         className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
       >
         <div className="container mx-auto">
-          <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px]">
+          <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px] p-4">
             <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0">
               <TabsTrigger value="experience" className="cursor-pointer">Experience</TabsTrigger>
               <TabsTrigger value="education" className="cursor-pointer">Education</TabsTrigger>
