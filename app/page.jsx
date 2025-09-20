@@ -13,8 +13,8 @@ export default function Home() {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */} 
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Graphic Designer and Full Stack Developer</span>
-            <h1 className="h1 mb-6">Hello! I'm <br /> <span className="text-amber-400">Dakota King</span></h1>
+            <h1 className="h1 mb-3">Hello! I'm <br /> <span className="text-amber-400">Dakota King</span></h1>
+            <p className="text-xl mb-3">A Graphic Designer and Full Stack Developer</p>
             <p className="max-w-[500px] mb-9 text-white/80">I excel at crafting a elegant digital experiences and I am proficient in various programing languages and technologies</p>
             {/* button and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
