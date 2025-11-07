@@ -26,11 +26,11 @@ const projects = [
     num: "01",
     category: "frontend",
     title: "Project One",
-    description: "A personal portfolio website built with React.js and Tailwind CSS.",
-    stack: [{name: "React.js"}, {name: "CSS"}, {name: "Javascript"}],
-    image: "/assets/work/Project 1.png",
-    github: "https://github.com/DakotaK92/Challenge-20-React-Portfolio",
-    live: "",
+    description: "A personal portfolio website built with Next.js and Tailwind CSS.",
+    stack: [{name: "Next.js"}, {name: "Tailwind CSS"}, {name: "Javascript"}],
+    image: "/assets/work/project1.png",
+    github: "https://github.com/DakotaK92/DakotaK92-Portfolio",
+    live: "https://dakotavking.dev/",
   },
   {
     num: "02",
@@ -38,7 +38,7 @@ const projects = [
     title: "Project Two",
     description: "A personal project for a friends company. I built a website for them using React.js.",
     stack: [{name: "React.js"}, {name: "CSS"}, {name: "Javascript"}],
-    image: "/assets/work/Project 2.png",
+    image: "/assets/work/project2.png",
     github: "https://github.com/DakotaK92/myPocketBard",
     live: "",
   },
@@ -46,12 +46,13 @@ const projects = [
     num: "03",
     category: "frontend",
     title: "Project Three",
-    description: "A personal portfolio website built with Next.js and Tailwind CSS.",
-    stack: [{name: "Next.js"}, {name: "Tailwind CSS"}, {name: "Javascript"}],
-    image: "/assets/work/Project 3.png",
-    github: "https://github.com/DakotaK92/DakotaK92-Portfolio",
-    live: "https://dakota-k92-portfolio.vercel.app/",
+    description: "A personal portfolio website built with React.js and CSS.",
+    stack: [{name: "React.js"}, {name: "CSS"}, {name: "Javascript"}],
+    image: "/assets/work/project3.png",
+    github: "https://github.com/DakotaK92/Challenge-20-React-Portfolio",
+    live: "",
   },
+
 ]
 
 const Work = () => {
@@ -76,22 +77,22 @@ const Work = () => {
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
               {/* outline */}
-              <div className="text-8xl leading-none font-extrabold text-white">
+              <div className="text-8xl leading-none font-extrabold text-[var(--accent)]">
                 {project.num}
                 </div>
               {/* project category */}
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-amber-400 transition-all duration-500 capitalize">
+              <h2 className="text-[42px] font-bold leading-none text-[var(--color)] group-hover:text-[var(--accent)] transition-all duration-500 capitalize">
                 {project.category} project
               </h2>
               {/* project description */}
-              <p className="text-white/60">
+              <p className="text-[var(--color)]">
                 {project.description}
               </p>
               {/* stack */}
               <ul className="flex gap-4">
                 {project.stack.map((item, index) => {
                   return (
-                    <li key={index} className="text-xl text-amber-400">
+                    <li key={index} className="text-xl text-[var(--color)]">
                       {item.name}
                       {/* remove last comma */}
                       {index !== project.stack.length - 1 && ","}
@@ -100,15 +101,15 @@ const Work = () => {
                 })}
               </ul>
               {/* border */}
-              <div className="border border-white/20"></div>
+              <div className="border border-[var(--foreground)]/20"></div>
               {/* buttons */}
               <div className="flex items-center gap-4">
                 {/* live project button */}
                 <Link href={project.live}>
                 <TooltipProvider delayDuration={100}>
                   <Tooltip>
-                    <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                      <BsArrowUpRight className="text-white text-3xl group-hover:text-amber-400"/>
+                    <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-[var(--foreground)]/5 flex justify-center items-center group">
+                      <BsArrowUpRight className="text-[var(--foreground)] text-3xl group-hover:text-[var(--color)"/>
                     </TooltipTrigger>
                     <TooltipContent>
                       <p>Live Project</p>
@@ -120,8 +121,8 @@ const Work = () => {
                 <Link href={project.github}>
                 <TooltipProvider delayDuration={100}>
                   <Tooltip>
-                    <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                      <BsGithub className="text-white text-3xl group-hover:text-amber-400"/>
+                    <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-[var(--foreground)]/5 flex justify-center items-center group">
+                      <BsGithub className="text-[var(--foreground)] text-3xl group-hover:text-[var(--hover)]"/>
                     </TooltipTrigger>
                     <TooltipContent>
                       <p>Github repository</p>
@@ -142,7 +143,7 @@ const Work = () => {
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-blue-950 border-2 border-yellow-400">
+                    <div className="h-[460px] relative group flex justify-center items-center bg-[var(--background)]">
                       {/* overlay */}
                       <div className="absolute top-0 bottom-0 w-full h-full bg-blue-500/10 z-10"></div>
                       {/* image */}
@@ -161,7 +162,7 @@ const Work = () => {
               {/* slider buttons */}
               <WorkSliderBtn 
                 containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none" 
-                btnStyles="bg-blue-950 hover:bg-amber-400 text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+                btnStyles="bg-[var(--background)] border-1 hover:bg-[var(--accent)] hover:text-[var(--foreground-hover)] hover:border-none text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
               />
             </Swiper>
           </div>

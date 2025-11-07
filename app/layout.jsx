@@ -2,6 +2,7 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { ThemeProvider } from "next-themes";
 
 // components
 import Header from "@components/Header";
@@ -15,21 +16,27 @@ const roboto = Roboto({
 });
 
 export const metadata = {
-  title: "A Dakota King Portfolio",
+  title: "Official Dakota King Portfolio",
   description: "Welcome to my portfolio website! I'm Dakota, a passionate developer and designer. Explore my projects, skills, and experience in web development. Let's create something amazing together!",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/app/favicon.ico",
   },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${roboto.variable}`}>
-        <Header />
-        <StairTransition />
-        <PageTransition>{children}</PageTransition>
-        <SpeedInsights />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem={true}
+        >
+          <Header />
+          <StairTransition />
+          <PageTransition>{children}</PageTransition>
+          <SpeedInsights />
+        </ThemeProvider>
       </body>
     </html>
   );

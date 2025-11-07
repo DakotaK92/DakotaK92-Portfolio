@@ -14,7 +14,7 @@ import {
   SelectValue,
  } from "@components/ui/select"
 
- import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+ import { FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
  const info = [
   {
@@ -52,8 +52,8 @@ const Contact = () => {
               </p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="First name"/>
-                <Input type="lastname" placeholder="Last name"/>
+                <Input type="text" placeholder="First name"/>
+                <Input type="text" placeholder="Last name"/>
                 <Input type="email" placeholder="Email address"/>
                 <Input type="phone" placeholder="Phone number"/>
               </div>
@@ -99,7 +99,7 @@ const Contact = () => {
                       <div className="text-[28px]">{item.icon}</div>
                     </div>
                     <div className="flex-1">
-                      <p className="text-white/60">{item.title}</p>
+                      <p className="text-[var(--foreground)]">{item.title}</p>
                       <h3 className="text-xl">{item.description}</h3>
                     </div>
                   </li>

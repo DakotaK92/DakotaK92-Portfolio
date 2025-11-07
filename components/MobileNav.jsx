@@ -10,10 +10,10 @@ const links = [
         name: 'home',
         path: '/',
     },
-    {
-        name: 'services',
-        path: '/services',
-    },
+    //{
+        //name: 'services',
+        //path: '/services',
+    //},
     {
         name: 'resume',
         path: '/resume',
@@ -33,15 +33,15 @@ const MobileNav = () => {
   return (
     <Sheet>
       <SheetTrigger className="flex justify-center items-center md:hidden">
-        <CiMenuFries className="text-[32px] text-amber-400"/>
+        <CiMenuFries className="text-[32px] text-[var(--accent)]"/>
       </SheetTrigger>
       <SheetContent className="flex flex-col p-2">
         {/* logo */}
         <a href="/" className='flex justify-center mt-20'>
-            <img src="/assets/king-crown.png" className="flex "/>
+            <img src="/assets/king-crown-white.png" className="flex p-2 w-56"/>
         </a>
         {/* nav */}
-        <nav className='flex flex-col justify-center items-center gap-4 p-4'>
+        <nav className='flex flex-col justify-center items-center gap-4 p-4 text-white'>
             {links.map((link, index) => {
                 return (
                     <Link 

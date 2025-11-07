@@ -1,8 +1,7 @@
-import * as React from "react"
-import { Slot } from "@radix-ui/react-slot"
+import * as React from "react";
+import { Slot } from "@radix-ui/react-slot";
 import { cva } from "class-variance-authority";
-
-import { cn } from "lib/utils";
+import { cn } from "../../lib/utils";
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-semibold ring-offset-white transition-colors",
@@ -10,7 +9,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-yellow-400 text-black hover:bg-yellow-200 hover:text-black cursor-pointer",
+          "bg-[var(--accent)] text-[var(--foreground-hover)] hover:bg-[var(--accent-hover)] hover:text-[var(--foreground-hover)] cursor-pointer",
       },
       size: {
         default: "h-[44px] px-6",
@@ -23,23 +22,22 @@ const buttonVariants = cva(
       size: "default",
     },
   }
-)
+);
 
-function Button({
-  className,
-  variant,
-  size,
-  asChild = false,
-  ...props
-}) {
-  const Comp = asChild ? Slot : "button"
+const Button = React.forwardRef(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button";
+    return (
+      <Comp
+        ref={ref}
+        data-slot="button"
+        className={cn(buttonVariants({ variant, size }), className)} // ✅ Fixed merge order
+        {...props}
+      />
+    );
+  }
+);
 
-  return (
-    <Comp
-      data-slot="button"
-      className={cn(buttonVariants({ variant, size, className }))}
-      {...props} />
-  );
-}
+Button.displayName = "Button";
 
-export { Button, buttonVariants }
+export { Button, buttonVariants };

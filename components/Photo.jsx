@@ -1,45 +1,40 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { useEffect, useState } from "react"
 import Image from "next/image"
 
 const Photo = () => {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 2000)
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
-    <div className="w-full h-full relative">
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{
-            opacity: 1,
-            transition: { delay: 2, duration: 0.4, ease: "easeIn" },
-            }
-        }
+    <div className="w-full h-full relative flex items-center justify-center">
+      {/* Fade wrapper */}
+      <div
+        className={`relative transition-opacity duration-[400ms] ease-in ${
+          isVisible ? "opacity-100" : "opacity-0"
+        }`}
       >
-        {/* Image */}
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{
-                opacity: 1,
-                transition: { delay: 2, duration: 0.4, ease: "easeInOut" },
-            }}
-        className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] absolute">
-            {/* Import pic of me */} 
-            <Image 
-              src="/assets/DakotaKPic.png"
-              priority 
-              quality={100}
-              fill alt='Picture of me'
-              className="object-contain"
-            />
-        </motion.div>
-        <motion.svg 
-          className="w-[300px] h-[300px] xl:w-[506px] xl:h-[506px]"
-          fill="transparent"
-          viewBox="0 0 300 300"
-          xmlns="http://www.w3.org/2000/svg"
+        {/* Image container */}
+        <div
+          className={`w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] relative transition-opacity duration-[400ms] ease-in-out ${
+            isVisible ? "opacity-100" : "opacity-0"
+          }`}
         >
-          <motion.polygon/>
-        </motion.svg>
-      </motion.div>
+          <Image
+            src="/assets/DakotaKPic2.png"
+            priority
+            quality={100}
+            fill
+            alt="Picture of me"
+            className="object-contain"
+          />
+        </div>
+      </div>
     </div>
   )
 }

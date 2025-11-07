@@ -2,17 +2,16 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { use } from "react";
 
 const links = [
     {
         name: "home",
         path: "/",
     },
-    {
-        name: "services",
-        path: "/services",
-    },
+    //{
+        //name: "services",
+        //path: "/services",
+    //},
     {
         name: "resume",
         path: "/resume",
@@ -33,8 +32,8 @@ const Nav = () => {
     <nav className="flex gap-8">
       {links.map((link, index) => {
         return (
-            <Link href={link.path} key={index} className={`${link.path === pathname && "text-amber-400 border-b-2 border-amber-400"
-            } capitalize font-medium hover:text-amber-400 transition-all`}>
+            <Link href={link.path} key={index} className={`${link.path === pathname && "text-[var(--accent)] border-b-2 border-[var(--accent)]"
+            } capitalize font-bold hover:text-[var(--accent)] transition-all text-l`}>
                 {link.name}
             </Link>
         )
