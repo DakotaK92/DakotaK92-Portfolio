@@ -60,8 +60,8 @@ const experience = {
   // list of experience items
   items: [
     {
-      company: "Walt Disney World",
-      position: "DCP - ??",
+      company: "Walt Disney World - Orlando, FL",
+      position: "Disney College Program",
       duration: "January 2026 - August 2026",
     },
     {
@@ -102,7 +102,7 @@ const education = {
     {
       institution: "Arizona State University (ASU)",
       degree: "Bachelor's Degree in Graphic Design",
-      duration: "January 2026 - ??",
+      duration: "January 2026",
     },
     {
       institution: "edX - Southern Methodist University (SMU)",

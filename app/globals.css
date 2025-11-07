@@ -9,6 +9,9 @@
   --accent-hover: oklch(46.736% 0.14842 266.723);
 
   --foreground-hover: oklch(100% 0 0);
+
+  --footer-background: oklch(34.846% 0.00004 271.152);
+  --footer-color: white;
 }
 
 .dark {
@@ -19,6 +22,9 @@
   --accent-hover: oklch(87.9% 0.169 91.605);
 
   --foreground-hover: oklch(0 0 0);
+
+  --footer-background: oklch(34.846% 0.00004 271.152);
+  --footer-color: white;
 }
 
 body {
