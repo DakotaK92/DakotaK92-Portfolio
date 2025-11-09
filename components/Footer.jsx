@@ -33,7 +33,7 @@ const Footer = () => {
                 href="https://github.com/dakotak92" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-[var(--footer-color)] transition hover:text-[var(--accent)]"
+                className="text-[var(--footer-color)] transition hover:text-amber-400"
               >
                 <span className="sr-only">GitHub</span>
                 <FaGithub className="w-6 h-6" />
@@ -44,7 +44,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/dakotaking92/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-[var(--footer-color)] transition hover:text-[var(--accent)]"
+                className="text-[var(--footer-color)] transition hover:text-amber-400"
               >
                 <span className="sr-only">LinkedIn</span>
                 <FaLinkedin className="w-6 h-6" />
@@ -55,7 +55,7 @@ const Footer = () => {
                 href="https://www.behance.net/dakotaking" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-[var(--footer-color)] transition hover:text-[var(--accent)]"
+                className="text-[var(--footer-color)] transition hover:text-amber-400"
               >
                 <span className="sr-only">Behance</span>
                 <FaBehanceSquare className="w-6 h-6"/>
