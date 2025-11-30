@@ -14,16 +14,16 @@ const Footer = () => {
 
           <ul className="mt-6 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12 font-bold">
             <li>
-                <a className="text-[var(--footer-color)] transition hover:text-[var(--accent)] [var(--accent)]" href="/"> Home </a>
+                <a className="text-[var(--footer-color)] transition hover:text-amber-400" href="/"> Home </a>
             </li>
             <li>
-                <a className="text-[var(--footer-color)] transition hover:text-[var(--accent)] [var(--accent)]" href="/resume"> Resume </a>
+                <a className="text-[var(--footer-color)] transition hover:text-amber-400" href="/resume"> Resume </a>
             </li>
             <li>
-                <a className="text-[var(--footer-color)] transition hover:text-[var(--accent)] [var(--accent)]" href="/work"> Work </a>
+                <a className="text-[var(--footer-color)] transition hover:text-amber-400" href="/work"> Work </a>
             </li>
             <li>
-                <a className="text-[var(--footer-color)] transition hover:text-[var(--accent)] [var(--accent)]" href="/contact"> Contact </a>
+                <a className="text-[var(--footer-color)] transition hover:text-amber-400" href="/contact"> Contact </a>
             </li>
           </ul>
 
