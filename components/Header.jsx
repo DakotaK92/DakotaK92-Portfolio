@@ -22,7 +22,7 @@ const Header = () => {
       : "/assets/king-crown-blue.png";
 
   return (
-    <header className="py-8 xl:py-12 px-6 transition-colors duration-300 bg-[var(--background)] text-[var(--foreground)]">
+    <header className="py-8 xl:py-12 px-6 transition-colors duration-300 bg-[var(--background)] text-[var(--foreground)] border-b border-gray-500/20">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">

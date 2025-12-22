@@ -6,7 +6,7 @@ const featuredProject = {
   title: "MyPocketBard",
   description:
     "AI-powered songwriting assistant with lyric generation and rhyme tools.",
-  video: "/videos/featured-project.mp4",
+  video: "/assets/intro-video.mp4",
   tools: [
     { name: "React", color: "bg-sky-100 text-sky-700" },
     { name: "Next.js", color: "bg-gray-200 text-gray-900" },
@@ -117,7 +117,7 @@ const Works = () => {
       }}
       className="w-full px-6 py-16 max-w-7xl mx-auto"
     >
-      <section className="w-full px-6 py-16 max-w-7xl mx-auto">
+      <section className="w-full max-w-7xl mx-auto">
         {/* ================= HERO / FEATURED WORK ================= */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20 bg-white p-8 rounded-xl">
           {/* Video */}
@@ -178,15 +178,15 @@ const Works = () => {
           </div>
         </div>
 
-        {/* ================= PROJECT CARDS ================= */}
-        <h2 className="text-3xl font-bold mb-6">Development Projects</h2>
+      {/* ================= PROJECT CARDS ================= */}
+      <h2 className="text-3xl font-bold mb-6">Development Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div
               key={project.id}
               className="relative rounded-xl overflow-hidden bg-white"
             >
-              {/* Ribbon — only shows when isNew === true */}
+              {/* Ribbon */}
               {project.isNew && (
                 <span className="absolute top-4 left-[-40px] rotate-[-45deg] bg-red-500 text-white text-xs px-12 py-1">
                   NEW
@@ -243,14 +243,14 @@ const Works = () => {
         </div>
 
         {/* ================= DESIGN CARDS ================= */}
-        <h2 className="text-3xl font-bold mt-20 mb-6">Design Projects</h2>
+        <h2 className="text-3xl font-bold mt-10 mb-6">Design Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
           {designs.map((design) => (
             <div
               key={design.id}
               className="relative rounded-xl overflow-hidden bg-white"
             >
-              {/* Ribbon — only shows when isNew === true */}
+              {/* Ribbon */}
               {design.isNew && (
                 <span className="absolute top-4 left-[-40px] rotate-[-45deg] bg-red-500 text-white text-xs px-12 py-1">
                   NEW
