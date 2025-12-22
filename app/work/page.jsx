@@ -1,175 +1,306 @@
-"use client"
+"use client";
 
 import { motion } from "framer-motion";
-import React, { useState } from "react";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
-
-import { 
-  Tooltip, 
-  TooltipContent, 
-  TooltipProvider, 
-  TooltipTrigger 
-} from "@components/ui/tooltip";
-
-import Link from "next/link";
-import Image from "next/image";
-
-{/* components */}
-import WorkSliderBtn from "@components/WorkSliderBtn";
+const featuredProject = {
+  title: "MyPocketBard",
+  description:
+    "AI-powered songwriting assistant with lyric generation and rhyme tools.",
+  video: "/videos/featured-project.mp4",
+  tools: [
+    { name: "React", color: "bg-sky-100 text-sky-700" },
+    { name: "Next.js", color: "bg-gray-200 text-gray-900" },
+    { name: "Tailwind CSS", color: "bg-cyan-100 text-cyan-700" },
+  ],
+  github: "https://github.com/DakotaK92/myPocketBard",
+  live: "https://my-pocket-bard.vercel.app/",
+};
 
 const projects = [
   {
-    num: "01",
-    category: "frontend",
-    title: "Project One",
-    description: "A personal portfolio website built with Next.js and Tailwind CSS.",
-    stack: [{name: "Next.js"}, {name: "Tailwind CSS"}, {name: "Javascript"}],
-    image: "/assets/work/project1.png",
-    github: "https://github.com/DakotaK92/DakotaK92-Portfolio",
-    live: "https://dakotavking.dev/",
-  },
-  {
-    num: "02",
-    category: "frontend",
-    title: "Project Two",
-    description: "A personal project for a friends company. I built a website for them using React.js.",
-    stack: [{name: "React.js"}, {name: "CSS"}, {name: "Javascript"}],
-    image: "/assets/work/project2.png",
+    id: 1,
+    title: "MyPocketBard",
+    description:
+      "AI-powered songwriting assistant with lyric generation and rhyme tools.",
+    image: "/assets/work/development-image-1.jpg",
+    tools: [
+      { name: "React", color: "bg-sky-100 text-sky-700" },
+      { name: "Next.js", color: "bg-gray-200 text-gray-900" },
+      { name: "Tailwind CSS", color: "bg-cyan-100 text-cyan-700" },
+    ],
     github: "https://github.com/DakotaK92/myPocketBard",
-    live: "",
+    live: "https://my-pocket-bard.vercel.app/",
+    isNew: true,
   },
   {
-    num: "03",
-    category: "frontend",
-    title: "Project Three",
-    description: "A personal portfolio website built with React.js and CSS.",
-    stack: [{name: "React.js"}, {name: "CSS"}, {name: "Javascript"}],
-    image: "/assets/work/project3.png",
-    github: "https://github.com/DakotaK92/Challenge-20-React-Portfolio",
-    live: "",
+    id: 2,
+    title: "Duncanville Comics App",
+    description:
+      "Mobile app for browsing comics store events, earn rewards for shopping and looking up comic book info.",
+    image: "/assets/work/design-image-1.jpg",
+    tools: [
+      { name: "React-Native", color: "bg-sky-100 text-sky-700" },
+      { name: "Tailwind CSS", color: "bg-cyan-100 text-cyan-700" },
+      { name: "Clerk", color: "bg-green-200 text-green-700" },
+    ],
+    github: "https://github.com/DakotaK92/DuncanvilleComics-ReactNative",
+    live: "https://your-live-site.com",
+    isNew: true,
   },
+  {
+    id: 3,
+    title: "DakotaK92 Portfolio",
+    description:
+      "Personal portfolio website showcasing projects and skills.",
+    image: "/assets/work/development-image-3.jpg",
+    tools: [
+      { name: "Framer Motion", color: "bg-pink-100 text-pink-700" },
+      { name: "Next.js", color: "bg-gray-200 text-gray-900" },
+      { name: "Tailwind CSS", color: "bg-cyan-100 text-cyan-700" },
+    ],
+    github: "https://github.com/DakotaK92/DakotaK92-Portfolio",
+    live: "https://dakotavking.dev",
+    isNew: false,
+  },
+];
 
-]
+const designs = [
+  {
+    id: 1,
+    title: "Duncanville Bookstore",
+    description:
+      "Rebrand and new identity for local bookstore with modern, fun and approachable design.",
+    image: "/assets/work/design-image-1.jpg",
+    tools: [
+      { name: "Illustrator", color: "bg-orange-200 text-gray-900" },
+      { name: "Photoshop", color: "bg-sky-100 text-gray-900" },
+    ],
+    behance: "https://www.behance.net/dakotaking",
+    isNew: true,
+  },
+  {
+    id: 2,
+    title: "Lick",
+    description:
+      "Ice cream brand identity and packaging design. Final project for branding degree.",
+    image: "/assets/work/design-image-2.jpg",
+    tools: [
+      { name: "Illustrator", color: "bg-orange-200 text-gray-900" },
+      { name: "Photoshop", color: "bg-sky-100 text-gray-900" },
+    ],
+    behance: "https://www.behance.net/dakotaking",
+    isNew: false,
+  },
+  {
+    id: 3,
+    title: "Dicey Dice",
+    description:
+      "Logo and branding for a tie die inspired clothing line. Dnd themed heavy designs.",
+    image: "/assets/work/design-image-3.jpg",
+    tools: [
+      { name: "Illustrator", color: "bg-orange-200 text-gray-900" },
+      { name: "Photoshop", color: "bg-sky-100 text-gray-900" },
+    ],
+    behance: "https://www.behance.net/dakotaking",
+    isNew: true,
+  },
+];
 
-const Work = () => {
-  const [project, setProject] = useState(projects[0]);
-  const handleSlideChange = (swiper) => {
-    // get current slide index
-    const currentIndex = swiper.activeIndex;
-    // update project state based on current slide index
-    setProject(projects[currentIndex])
-  }
+
+const Works = () => {
   return (
-    <motion.div 
-      initial={{opacity: 0}} 
+    <motion.section
+      initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: {delay: 2.4, duration: 0.4, ease: 'easeIn'}
-      }} 
-      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0 p-4"
-      >
-      <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-          <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
-            <div className="flex flex-col gap-[30px] h-[50%]">
-              {/* outline */}
-              <div className="text-8xl leading-none font-extrabold text-[var(--accent)]">
-                {project.num}
-                </div>
-              {/* project category */}
-              <h2 className="text-[42px] font-bold leading-none text-[var(--color)] group-hover:text-[var(--accent)] transition-all duration-500 capitalize">
-                {project.category} project
-              </h2>
-              {/* project description */}
-              <p className="text-[var(--color)]">
-                {project.description}
-              </p>
-              {/* stack */}
-              <ul className="flex gap-4">
-                {project.stack.map((item, index) => {
-                  return (
-                    <li key={index} className="text-xl text-[var(--color)]">
-                      {item.name}
-                      {/* remove last comma */}
-                      {index !== project.stack.length - 1 && ","}
-                    </li>
-                  )
-                })}
-              </ul>
-              {/* border */}
-              <div className="border border-[var(--foreground)]/20"></div>
-              {/* buttons */}
-              <div className="flex items-center gap-4">
-                {/* live project button */}
-                <Link href={project.live}>
-                <TooltipProvider delayDuration={100}>
-                  <Tooltip>
-                    <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-[var(--foreground)]/5 flex justify-center items-center group">
-                      <BsArrowUpRight className="text-[var(--foreground)] text-3xl group-hover:text-[var(--color)"/>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p>Live Project</p>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
-                </Link>
-                {/* github project button */}
-                <Link href={project.github}>
-                <TooltipProvider delayDuration={100}>
-                  <Tooltip>
-                    <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-[var(--foreground)]/5 flex justify-center items-center group">
-                      <BsGithub className="text-[var(--foreground)] text-3xl group-hover:text-[var(--hover)]"/>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p>Github repository</p>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
-                </Link>
+        transition: { delay: 1.5, duration: 0.4, ease: "easeIn" },
+      }}
+      className="w-full px-6 py-16 max-w-7xl mx-auto"
+    >
+      <section className="w-full px-6 py-16 max-w-7xl mx-auto">
+        {/* ================= HERO / FEATURED WORK ================= */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20 bg-white p-8 rounded-xl">
+          {/* Video */}
+          <div className="relative w-full rounded-xl overflow-hidden bg-black">
+            <video
+              src={featuredProject.video}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/20" />
+          </div>
+
+          {/* Description */}
+          <div className="text-black flex flex-col justify-center">
+            <h2 className="text-4xl font-bold mb-4">
+              {featuredProject.title}
+            </h2>
+
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              {featuredProject.description}
+            </p>
+
+            {/* Tools */}
+            <div className="mb-6">
+              <h4 className="font-semibold mb-2">Tools Used</h4>
+              <div className="flex flex-wrap gap-2">
+                {featuredProject.tools.map((tool) => (
+                  <span
+                    key={tool.name}
+                    className={`px-3 py-1 text-sm rounded-full ${tool.color}`}
+                  >
+                    {tool.name}
+                  </span>
+                ))}
               </div>
             </div>
-          </div>
-          <div className="w-full xl:w-[50%]">
-            <Swiper
-              spaceBetween={30}
-              slidesPerView={1}
-              className="xl:h-[520px] mb-12"
-              onSlideChange={handleSlideChange}
-            >
-              {projects.map((project, index) => {
-                return (
-                  <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-[var(--background)]">
-                      {/* overlay */}
-                      <div className="absolute top-0 bottom-0 w-full h-full bg-blue-500/10 z-10"></div>
-                      {/* image */}
-                      <div className="relative w-full h-full">
-                        <Image 
-                          src={project.image} 
-                          fill 
-                          className="object-contain" 
-                          alt='' 
-                        />
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                )
-              })}
-              {/* slider buttons */}
-              <WorkSliderBtn 
-                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none" 
-                btnStyles="bg-[var(--background)] border-1 hover:bg-[var(--accent)] hover:text-[var(--foreground-hover)] hover:border-none text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
-              />
-            </Swiper>
+
+            {/* Buttons */}
+            <div className="flex gap-4">
+              <a
+                href={featuredProject.github}
+                target="_blank"
+                className="px-6 py-3 rounded-lg hover:bg-[var(--accent-hover)] text-[var(--foreground-hover)] transition bg-[var(--accent)]"
+              >
+                GitHub
+              </a>
+              <a
+                href={featuredProject.live}
+                target="_blank"
+                className="px-6 py-3 bg-black text-white rounded-lg hover:opacity-80 transition"
+              >
+                Live Site
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </motion.div>
-  )
-}
 
-export default Work
+        {/* ================= PROJECT CARDS ================= */}
+        <h2 className="text-3xl font-bold mb-6">Development Projects</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className="relative rounded-xl overflow-hidden bg-white"
+            >
+              {/* Ribbon — only shows when isNew === true */}
+              {project.isNew && (
+                <span className="absolute top-4 left-[-40px] rotate-[-45deg] bg-red-500 text-white text-xs px-12 py-1">
+                  NEW
+                </span>
+              )}
+
+              {/* Image */}
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-48 object-cover"
+              />
+
+              {/* Content */}
+              <div className="p-5">
+                <h3 className="text-black text-xl font-semibold mb-2">
+                  {project.title}
+                </h3>
+
+                <p className="text-gray-600 text-sm mb-4">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tools.map((tool) => (
+                    <span
+                      key={tool.name}
+                      className={`px-3 py-1 text-sm rounded-full ${tool.color}`}
+                    >
+                      {tool.name}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex gap-3">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    className="flex-1 text-center px-4 py-2 border-[var(--accent)] rounded-md text-sm hover:bg-[var(--accent-hover)] text-[var(--foreground-hover)] transition bg-[var(--accent)]"
+                  >
+                    GitHub
+                  </a>
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    className="flex-1 text-center px-4 py-2 bg-black text-white rounded-md text-sm hover:opacity-80 transition"
+                  >
+                    Live
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* ================= DESIGN CARDS ================= */}
+        <h2 className="text-3xl font-bold mt-20 mb-6">Design Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
+          {designs.map((design) => (
+            <div
+              key={design.id}
+              className="relative rounded-xl overflow-hidden bg-white"
+            >
+              {/* Ribbon — only shows when isNew === true */}
+              {design.isNew && (
+                <span className="absolute top-4 left-[-40px] rotate-[-45deg] bg-red-500 text-white text-xs px-12 py-1">
+                  NEW
+                </span>
+              )}
+
+              {/* Image */}
+              <img
+                src={design.image}
+                alt={design.title}
+                className="w-full h-48 object-cover"
+              />
+
+              {/* Content */}
+              <div className="p-5">
+                <h3 className="text-xl font-semibold mb-2">
+                  {design.title}
+                </h3>
+
+                <p className="text-gray-600 text-sm mb-4">
+                  {design.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {design.tools.map((tool) => (
+                    <span
+                      key={tool.name}
+                      className={`px-3 py-1 text-sm rounded-full ${tool.color}`}
+                    >
+                      {tool.name}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex gap-3">
+                  <a
+                    href={design.behance}
+                    target="_blank"
+                    className="flex-1 text-center px-4 py-2 bg-black text-white rounded-md text-sm hover:opacity-80 transition"
+                  >
+                    Behance
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </motion.section>
+  );
+};
+
+export default Works;
