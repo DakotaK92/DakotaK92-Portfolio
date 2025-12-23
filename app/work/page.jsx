@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const featuredProject = {
-  title: "DakotaK92 Portfolio",
+  title: "Dakota King Portfolio",
   description:
     "Personal portfolio website showcasing projects and skills.",
   video: "/assets/intro-videob_1.mp4",
@@ -50,7 +50,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "DakotaK92 Portfolio",
+    title: "Dakota King Portfolio",
     description:
       "Personal portfolio website showcasing projects and skills.",
     image: "/assets/work/development-image-3.jpg",
