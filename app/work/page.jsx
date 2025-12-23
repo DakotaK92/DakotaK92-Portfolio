@@ -3,17 +3,18 @@
 import { motion } from "framer-motion";
 
 const featuredProject = {
-  title: "MyPocketBard",
+  title: "DakotaK92 Portfolio",
   description:
-    "AI-powered songwriting assistant with lyric generation and rhyme tools.",
-  video: "/assets/intro-video.mp4",
+    "Personal portfolio website showcasing projects and skills.",
+  video: "/assets/intro-videob_1.mp4",
   tools: [
     { name: "React", color: "bg-sky-100 text-sky-700" },
     { name: "Next.js", color: "bg-gray-200 text-gray-900" },
     { name: "Tailwind CSS", color: "bg-cyan-100 text-cyan-700" },
+    { name: "Framer Motion", color: "bg-pink-100 text-pink-700" },
   ],
-  github: "https://github.com/DakotaK92/myPocketBard",
-  live: "https://my-pocket-bard.vercel.app/",
+  github: "https://github.com/DakotaK92/DakotaK92-Portfolio",
+  live: "https://dakotavking.dev",
 };
 
 const projects = [
@@ -34,7 +35,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "Duncanville Comics App",
+    title: "Duncanville Bookstore App",
     description:
       "Mobile app for browsing comics store events, earn rewards for shopping and looking up comic book info.",
     image: "/assets/work/design-image-1.jpg",
@@ -44,7 +45,7 @@ const projects = [
       { name: "Clerk", color: "bg-green-200 text-green-700" },
     ],
     github: "https://github.com/DakotaK92/DuncanvilleComics-ReactNative",
-    live: "https://your-live-site.com",
+    live: "https://github.com/DakotaK92/DuncanvilleComics-ReactNative",
     isNew: true,
   },
   {
