@@ -19,8 +19,7 @@ export default function ThemeToggle() {
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label="Toggle theme"
       className="relative flex items-center justify-center w-10 h-10 rounded-full border border-neutral-300 dark:border-neutral-700 
-                 bg-neutral-100 dark:bg-neutral-900 hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors
-                 shadow-sm hover:shadow-md"
+        bg-neutral-100 dark:bg-neutral-900 hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors shadow-sm hover:shadow-md"
     >
       <AnimatePresence mode="wait" initial={false}>
         {isDark ? (

@@ -100,11 +100,6 @@ const education = {
   // list of experience items
   items: [
     {
-      institution: "Arizona State University (ASU)",
-      degree: "Bachelor's Degree in Graphic Design",
-      duration: "January 2026",
-    },
-    {
       institution: "edX - Southern Methodist University (SMU)",
       degree: "Full Stack Developer Boot-camp",
       duration: "Nov. 2023 - May 2024",
