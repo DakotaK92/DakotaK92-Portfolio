@@ -20,7 +20,7 @@ export default function Home() {
             <div className="flex flex-col xl:flex-row items-center gap-8">
             <Button size="lg" className="uppercase flex items-center gap-2">
               <a 
-                href="/assets/resume/Dakota King-Resume 2025.pdf" 
+                href="/assets/resume/DakotaKing-2026Resume.pdf" 
                 download 
                 className="flex items-center gap-2"
               >
