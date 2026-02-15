@@ -27,7 +27,7 @@ const Header = () => {
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <img src={logoSrc} alt="Dakota King logo" className="w-36 h-auto" />
+          <img src={logoSrc} alt="Dakota King logo" className="w-76 h-auto" />
         </Link>
 
         {/* Desktop Navigation (1024px+) */}
