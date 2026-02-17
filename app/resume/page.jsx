@@ -18,61 +18,39 @@ import {
 const about = {
   title: "About Me",
   description:
-    "I'm a passionate web developer with a knack for creating dynamic and responsive web applications. I love exploring new technologies and continuously improving my skills.",
+    "I’m a full-stack web developer with a background in graphic design and production, allowing me to approach development with both technical precision and strong visual awareness. I specialize in building responsive, performance-focused applications using React, Next.js, and modern UI frameworks. My experience in fast-paced production environments has strengthened my problem-solving skills, attention to detail, and ability to deliver high-quality work under tight deadlines.",
   info: [
-    {
-      fieldName: "Name:",
-      fieldValue: "Dakota King",
-    },
-    {
-      fieldName: "Experience:",
-      fieldValue: "2 Years",
-    },
-    {
-      fieldName: "Country:",
-      fieldValue: "USA",
-    },
-    {
-      fieldName: "State:",
-      fieldValue: "Florida",
-    },
-    {
-      fieldName: "Email:",
-      fieldValue: "dakotaking92@gmail.com",
-    },
-    {
-      fieldName: "Freelance:",
-      fieldValue: "Available",
-    },
-    {
-      fieldName: "Language:",
-      fieldValue: "English",
-    },
+    { fieldName: "Name:", fieldValue: "Dakota King" },
+    { fieldName: "Experience:", fieldValue: "2 Years" },
+    { fieldName: "Country:", fieldValue: "USA" },
+    { fieldName: "State:", fieldValue: "Florida" },
+    { fieldName: "Email:", fieldValue: "dakotaking92@gmail.com" },
+    { fieldName: "Freelance:", fieldValue: "Available" },
+    { fieldName: "Language:", fieldValue: "English" },
   ],
 };
 
 // experience data
 const experience = {
-  // put resume here
-  icon: undefined,
   title: 'My Experience',
-  description: 'I have a diverse range of experience in web development and design. Here are some of the highlights:',
+  description: 
+    "A blend of development, production design, and customer-focused roles that have strengthened both my technical and collaborative skillsets.",
   // list of experience items
   items: [
     {
       company: "Walt Disney World - Orlando, FL",
       position: "Disney College Program",
-      duration: "January 2026 - August 2026",
+      duration: "Jan 2026 – Aug 2026",
     },
     {
       company: "FASTSIGNS - Lakeland, FL",
-      position: "Graphic Design and Production",
-      duration: "March 2025 - September 2025",
+      position: "Graphic Design & Production",
+      duration: "Mar 2025 – Sept 2025",
     },
     {
       company: "FASTSIGNS - Carrollton, TX",
-      position: "Graphic Design and Production",
-      duration: "Sep 2022 - March 2025",
+      position: "Graphic Design & Production",
+      duration: "Sept 2022 – Mar 2025",
     },
     {
       company: "Signarama - McKinney, TX",
@@ -93,11 +71,9 @@ const experience = {
 };
 
 const education = {
-  // put resume here
-  icon: undefined,
   title: 'My Education',
-  description: 'I have a strong educational background in web development and design. Here are some of the highlights:',
-  // list of experience items
+  description: 
+  'Formal education combined with hands-on development training.',
   items: [
     {
       institution: "edX - Southern Methodist University (SMU)",
@@ -115,48 +91,24 @@ const education = {
 const skills = {
   title: "My Skills",
   description:
-    "I have a diverse skill set that includes both technical and soft skills. Here are some of the key skills I carry:",
+    "A blend of frontend, backend, and design tools that allow me to build complete, polished web experiences.",
     skillList: [
-      {
-        icon: <FaHtml5 />,
-        name: "html 5",
-      },
-      {
-        icon: <FaCss3 />,
-        name: "css 3",
-      },
-      {
-        icon: <FaJs />,
-        name: "javascript",
-      },
-      {
-        icon: <FaReact />,
-        name: "react.js",
-      },
-      {
-        icon: <SiNextdotjs />,
-        name: "next.js",
-      },
-      {
-        icon: <SiTailwindcss />,
-        name: "tailwind.css",
-      },
-      {
-        icon: <FaNodeJs />,
-        name: "node.js",
-      },
-      {
-        icon: <SiAdobecreativecloud />,
-        name: "adobe creative cloud",
-      },
+      { icon: <FaHtml5 /> },
+      { icon: <FaCss3 /> },
+      { icon: <FaJs /> },
+      { icon: <FaReact /> },
+      { icon: <SiNextdotjs /> },
+      { icon: <SiTailwindcss /> },
+      { icon: <FaNodeJs /> },
+      { icon: <SiAdobecreativecloud /> },
     ]
 };
 
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@components/ui/tooltip";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../../components/ui/tooltip";
 
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "../../components/ui/tabs";
 
-import { ScrollArea } from "@components/ui/scroll-area";
+import { ScrollArea } from "../../components/ui/scroll-area";
 import { motion } from "framer-motion";
 
 const Resume = () => {
@@ -170,6 +122,7 @@ const Resume = () => {
         }}
         className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
       >
+        {/* Sidebar */}
         <div className="container mx-auto">
           <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px] p-4">
             <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0">
@@ -178,22 +131,30 @@ const Resume = () => {
               <TabsTrigger value="skills" className="cursor-pointer">Skills</TabsTrigger>
               <TabsTrigger value="about" className="cursor-pointer">About me</TabsTrigger>
             </TabsList>
-            {/* content */}
+
+            {/* Content */}
             <div className="min-h-[70vh] w-full">
-              {/* experience */}
+
+              {/* Experience */}
               <TabsContent value="experience" className="w-full">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold text-[var(--foreground)]">{experience.title}</h3>
                   <p className="max-w-[600px] text-[var(--foreground)] mx-auto xl:mx-0">{experience.description}</p>
+
                   <ScrollArea className="h-[400px]">
                     <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                       {experience.items.map((item, index) => {
                         return (
                           <li key={index} className="bg-blue-950 h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
-                            <span className="text-amber-400">{item.duration}</span>
-                            <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left text-white">{item.position}</h3>
+                            <span className="text-amber-400">
+                              {item.duration}
+                            </span>
+                            <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left text-white">
+                              {item.position}
+                            </h3>
+
                             <div className="flex items-center gap-3">
-                              {/* dot */}
+                              {/* line accent */}
                               <span className="w-[40px] h-[6px] rounded-full bg-amber-400"></span>
                               <p className="text-white/60">{item.company}</p>
                             </div>
@@ -205,7 +166,7 @@ const Resume = () => {
                 </div>
               </TabsContent>
 
-              {/* education */}
+              {/* Education */}
               <TabsContent value="education" className="w-full">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{education.title}</h3>
@@ -218,7 +179,7 @@ const Resume = () => {
                             <span className="text-amber-400">{item.duration}</span>
                             <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left text-white">{item.degree}</h3>
                             <div className="flex items-center gap-3">
-                              {/* dot */}
+                              {/* line accent */}
                               <span className="w-[40px] h-[6px] rounded-full bg-amber-400"></span>
                               <p className="text-white/60">{item.institution}</p>
                             </div>
@@ -230,7 +191,7 @@ const Resume = () => {
                 </div>
               </TabsContent>
 
-              {/* skills */}
+              {/* Skills */}
               <TabsContent value="skills" className="w-full h-full">
                 <div className="flex flex-col gap-[30px]">
                     <div className="flex flex-col gap-[30px] text-center xl:text-left">
@@ -245,9 +206,6 @@ const Resume = () => {
                               <TooltipTrigger className="w-full h-[150px] bg-blue-950 rounded-xl flex justify-center items-center group">
                                 <div className="text-6xl group-hover:text-amber-400 transition-all duration-300 text-white">{skill.icon}</div>
                               </TooltipTrigger>
-                              <TooltipContent>
-                                <p className="capitalize">{skill.name}</p>
-                              </TooltipContent>
                             </Tooltip>
                           </TooltipProvider>
                         </li>
@@ -256,7 +214,7 @@ const Resume = () => {
                 </div>
               </TabsContent>
 
-              {/* about */}
+              {/* About */}
               <TabsContent value="about" className="w-full text-center xl:text-left">
                 <div className="flex flex-col gap-[30px]">
                   <h3 className="text-4xl font-bold">{about.title}</h3>
