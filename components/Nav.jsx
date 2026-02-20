@@ -25,7 +25,7 @@ const Nav = () => {
           <Link
             href={link.path}
             key={link.path}
-            className={`capitalize font-bold text-lg transition-all hover:text-[var(--accent)] ${
+            className={`capitalize font-bold text-lg transition-all ${
               isActive
                 ? "text-[var(--accent)] border-b-2 border-[var(--accent)]"
                 : ""

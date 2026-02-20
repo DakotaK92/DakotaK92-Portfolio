@@ -20,22 +20,22 @@ const Footer = () => {
         {/* Navigation */}
         <ul className="mt-6 flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 font-bold">
           <li>
-            <Link href="/" className="text-[var(--footer-color)] transition-colors duration-200 hover:text-amber-400">
+            <Link href="/" className="text-white transition-colors duration-200 hover:text-amber-400">
               Home
             </Link>
           </li>
           <li>
-            <Link href="/resume" className="text-[var(--footer-color)] transition-colors duration-200 hover:text-amber-400">
+            <Link href="/resume" className="text-white transition-colors duration-200 hover:text-amber-400">
               Resume
             </Link>
           </li>
           <li>
-            <Link href="/work" className="text-[var(--footer-color)] transition-colors duration-200 hover:text-amber-400">
+            <Link href="/work" className="text-white transition-colors duration-200 hover:text-amber-400">
               Work
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="text-[var(--footer-color)] transition-colors duration-200 hover:text-amber-400">
+            <Link href="/contact" className="text-white transition-colors duration-200 hover:text-amber-400">
               Contact
             </Link>
           </li>
@@ -48,7 +48,7 @@ const Footer = () => {
               href="https://github.com/dakotak92"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--footer-color)] transition-colors duration-200 hover:text-amber-400"
+              className="text-white transition-colors duration-200 hover:text-amber-400"
             >
               <span className="sr-only">GitHub</span>
               <FaGithub className="w-6 h-6" />
@@ -60,7 +60,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/dakotaking92/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--footer-color)] transition-colors duration-200 hover:text-amber-400"
+              className="text-white transition-colors duration-200 hover:text-amber-400"
             >
               <span className="sr-only">LinkedIn</span>
               <FaLinkedin className="w-6 h-6" />
@@ -72,7 +72,7 @@ const Footer = () => {
               href="https://www.behance.net/dakotaking"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--footer-color)] transition-colors duration-200 hover:text-amber-400"
+              className="text-white transition-colors duration-200 hover:text-amber-400"
             >
               <span className="sr-only">Behance</span>
               <FaBehanceSquare className="w-6 h-6" />
@@ -81,7 +81,7 @@ const Footer = () => {
         </ul>
 
         {/* Copyright */}
-        <p className="mt-8 text-center text-sm text-[var(--footer-color)]">
+        <p className="mt-8 text-center text-sm text-white">
           © {new Date().getFullYear()} Dakota King. All rights reserved.
         </p>
       </div>

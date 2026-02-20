@@ -15,7 +15,7 @@ export default function Home() {
           <div className="text-center xl:text-left order-2 xl:order-none">
             <h1 className="h1 mb-3">Hello! I'm <br /> <span className="text-[var(--accent)]">Dakota King</span></h1>
             <p className="text-2xl mb-3">A Graphic Designer and Full Stack Developer</p>
-            <p className="max-w-[500px] mb-9 text-[var(--foreground)]">I excel at crafting a elegant digital experiences and I am proficient in various programming languages and technologies</p>
+            <p className="max-w-[500px] mb-9 text-[var(--text)]">I excel at crafting a elegant digital experiences and I am proficient in various programming languages and technologies</p>
             {/* button and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
             <Button size="lg" className="uppercase flex items-center gap-2">
@@ -24,14 +24,14 @@ export default function Home() {
                 download 
                 className="flex items-center gap-2"
               >
-                <span>Download my Resume</span>
-                <FiDownload className="text-xl"/>
+                <span className="text-[var(--button-text)]">Download my Resume</span>
+                <FiDownload className="text-xl text-[var(--button-text)]"/>
               </a>
             </Button>
               <div className="mb-8 xl:mb-0">
                 <Social 
                 containerStyles="flex gap-6" 
-                iconStyles="w-9 h-9 bg-[var(--accent)] rounded-full flex justify-center items-center text-[var(--foreground-hover)] text-base hover:bg-[var(--accent-hover)] hover:transition-all duration-500"/>
+                iconStyles="w-9 h-9 bg-[var(--accent)] rounded-full flex justify-center items-center text-[var(--button-text)] text-base hover:bg-[var(--accent-hover)] hover:transition-all duration-500"/>
               </div>
             </div>
           </div>

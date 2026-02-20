@@ -164,7 +164,7 @@ const Works = () => {
               <a
                 href={featuredProject.github}
                 target="_blank"
-                className="px-6 py-3 rounded-lg hover:bg-[var(--accent-hover)] text-[var(--foreground-hover)] transition bg-[var(--accent)]"
+                className="px-6 py-3 rounded-lg hover:bg-[var(--accent-hover)] text-[var(--button-text)] transition bg-[var(--accent)]"
               >
                 GitHub
               </a>
@@ -226,7 +226,7 @@ const Works = () => {
                   <a
                     href={project.github}
                     target="_blank"
-                    className="flex-1 text-center px-4 py-2 border-[var(--accent)] rounded-md text-sm hover:bg-[var(--accent-hover)] text-[var(--foreground-hover)] transition bg-[var(--accent)]"
+                    className="flex-1 text-center px-4 py-2 rounded-md text-sm hover:bg-[var(--accent-hover)] text-[var(--button-text)] transition bg-[var(--accent)]"
                   >
                     GitHub
                   </a>
@@ -267,7 +267,7 @@ const Works = () => {
 
               {/* Content */}
               <div className="p-5">
-                <h3 className="text-xl font-semibold mb-2">
+                <h3 className="text-black text-xl font-semibold mb-2">
                   {design.title}
                 </h3>
 

@@ -22,7 +22,7 @@ const Header = () => {
       : "/assets/king-crown-blue.png";
 
   return (
-    <header className="py-6 xl:py-12 px-6 transition-colors duration-300 bg-[var(--background)] text-[var(--foreground)] border-b border-gray-500/20">
+    <header className="py-6 xl:py-12 px-6 transition-colors duration-300 bg-[var(--background)] text-[var(--accent)] border-b border-gray-500/20">
       <div className="container mx-auto flex justify-between items-center">
 
         {/* Logo */}
@@ -34,7 +34,7 @@ const Header = () => {
         <div className="hidden lg:flex items-center gap-8">
           <Nav />
           <Link href="/contact">
-            <Button className="bg-[var(--accent)] hover:opacity-90 transition">
+            <Button className="text-[var(--button-text)] bg-[var(--accent)] hover:opacity-90 hover:text-[var(--button-text)] transition">
               Hire Me
             </Button>
           </Link>

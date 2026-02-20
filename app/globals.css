@@ -1,36 +1,37 @@
 @import "tailwindcss";
 
-
 :root {
   --background: oklch(84.522% 0.0001 271.152);
-  --foreground: oklch(20% 0.05 265.522);
+  --foreground: oklch(33.569% 0.12696 265.747);
+  --inactive: oklch(21.488% 0.06052 267.324);
+
+  --text: black;
+  --accent-text: oklch(37.9% 0.146 265.522);
+
+  --button-text: white;
 
   --accent: oklch(37.9% 0.146 265.522);
   --accent-hover: oklch(46.736% 0.14842 266.723);
-
-  --foreground-hover: oklch(100% 0 0);
-
-  --footer-background: oklch(34.846% 0.00004 271.152);
-  --footer-color: white;
 }
 
 .dark {
-  --background: oklch(37.9% 0.146 265.522); 
-  --foreground: oklch(98% 0.02 265.522); 
+  --background: oklch(25.967% 0.00241 248.201); 
+  --foreground: oklch(22.213% 0.00003 271.152);
+  --inactive: oklch(22.213% 0.00003 271.152);
+
+  --text: white;
+  --accent-text: oklch(87.9% 0.169 91.605);
+
+  --button-text: black;
 
   --accent: oklch(82.8% 0.189 84.429);
-  --accent-hover: oklch(87.9% 0.169 91.605);
-
-  --foreground-hover: oklch(0 0 0);
-
-  --footer-background: oklch(34.846% 0.00004 271.152);
-  --footer-color: white;
+  --accent-hover: oklch(88.93% 0.15934 92.861);
 }
 
 body {
   background: var(--background);
   font-family: 'Roboto', sans-serif;
-  color: var(--foreground);
+  color: var(--text);
 }
 
 @layer base {
