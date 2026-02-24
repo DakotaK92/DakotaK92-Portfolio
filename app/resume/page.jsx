@@ -132,7 +132,7 @@ const Resume = () => {
                   text-muted-foreground 
                   dark:text-muted-foreground
                   data-[state=active]:text-foreground
-                  dark:data-[state=active]:text-white"
+                  dark:data-[state=active]:text-[var(--button-text)]"
               >
                 Experience
               </TabsTrigger>
@@ -143,7 +143,7 @@ const Resume = () => {
                   text-muted-foreground 
                   dark:text-muted-foreground
                   data-[state=active]:text-foreground
-                  dark:data-[state=active]:text-white"
+                  dark:data-[state=active]:text-[var(--button-text)]"
               >
                 Education
               </TabsTrigger>
@@ -154,7 +154,7 @@ const Resume = () => {
                   text-muted-foreground 
                   dark:text-muted-foreground
                   data-[state=active]:text-foreground
-                  dark:data-[state=active]:text-white"
+                  dark:data-[state=active]:text-[var(--button-text)]"
               >
                 Skills
               </TabsTrigger>
@@ -165,7 +165,7 @@ const Resume = () => {
                   text-muted-foreground 
                   dark:text-muted-foreground
                   data-[state=active]:text-foreground
-                  dark:data-[state=active]:text-white"
+                  dark:data-[state=active]:text-[var(--button-text)]"
               >
                 About me
               </TabsTrigger>
