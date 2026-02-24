@@ -45,7 +45,7 @@ const projects = [
       { name: "Clerk", color: "bg-green-200 text-green-700" },
     ],
     github: "https://github.com/DakotaK92/DuncanvilleComics-ReactNative",
-    live: "https://github.com/DakotaK92/DuncanvilleComics-ReactNative",
+    live: "https://www.youtube.com/watch?v=NU1NDJTvKzg",
     isNew: true,
   },
   {
