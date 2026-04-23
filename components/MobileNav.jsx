@@ -1,5 +1,6 @@
 'use client';
 
+import Image from "next/image";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from './ui/sheet';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
@@ -17,24 +18,33 @@ const MobileNav = () => {
 
   return (
     <Sheet>
-      <SheetTrigger className="flex items-center justify-center">
+      <SheetTrigger
+        className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border-soft)] bg-[var(--panel)] shadow-lg backdrop-blur-xl"
+        aria-label="Open navigation menu"
+      >
         <CiMenuFries className="text-[32px] text-[var(--accent)]" />
       </SheetTrigger>
 
-      <SheetContent className="flex flex-col p-2">
-        {/* logo */}
-        <Link href="/" className="flex justify-center mt-20">
-          <img src="/assets/king-crown-white.png" className="w-56 p-2" />
+      <SheetContent className="flex flex-col p-3">
+        <Link href="/" className="mt-20 flex justify-center">
+          <Image
+            src="/assets/king-crown-white.png"
+            alt="Dakota King logo"
+            width={224}
+            height={57}
+            className="w-56 p-2"
+          />
         </Link>
 
-        {/* nav */}
-        <nav className="flex flex-col items-center gap-4 p-4 text-white">
+        <nav className="mt-8 flex flex-col items-center gap-3 p-4">
           {links.map((link, index) => (
             <SheetClose asChild key={index}>
               <Link
                 href={link.path}
-                className={`text-xl capitalize transition-all hover:text-amber-400 ${
-                  link.path === pathname ? "text-amber-400 border-b-2" : ""
+                className={`w-full rounded-2xl px-4 py-3 text-center text-sm font-bold uppercase tracking-[0.2em] transition-all ${
+                  link.path === pathname
+                    ? "bg-[var(--accent)] text-[var(--button-text)]"
+                    : "bg-white/8 text-white/82 hover:bg-white/12 hover:text-white"
                 }`}
               >
                 {link.name}

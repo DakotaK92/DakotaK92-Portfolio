@@ -1,47 +1,95 @@
 import { Button } from "../components/ui/button";
 import { FiDownload } from "react-icons/fi";
+import Link from "next/link";
 
-// components
 import Social from "../components/Social";
 import Photo from "../components/Photo";
 import Stats from "../components/Stats";
 
 export default function Home() {
   return (
-    <section className="h-full p-2">
-      <div className="container mx-auto h-full">
-        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
-          {/* text */} 
-          <div className="text-center xl:text-left order-2 xl:order-none">
-            <h1 className="h1 mb-3">Hello! I'm <br /> <span className="text-[var(--accent)]">Dakota King</span></h1>
-            <p className="text-2xl mb-3">A Graphic Designer and Full Stack Developer</p>
-            <p className="max-w-[500px] mb-9 text-[var(--text)]">I excel at crafting a elegant digital experiences and I am proficient in various programming languages and technologies</p>
-            {/* button and socials */}
-            <div className="flex flex-col xl:flex-row items-center gap-8">
-            <Button size="lg" className="uppercase flex items-center gap-2">
-              <a 
-                href="/assets/resume/DakotaKing-2026Resume.pdf" 
-                download 
-                className="flex items-center gap-2"
-              >
-                <span className="text-[var(--button-text)]">Download my Resume</span>
-                <FiDownload className="text-xl text-[var(--button-text)]"/>
-              </a>
-            </Button>
-              <div className="mb-8 xl:mb-0">
-                <Social 
-                containerStyles="flex gap-6" 
-                iconStyles="w-9 h-9 bg-[var(--accent)] rounded-full flex justify-center items-center text-[var(--button-text)] text-base hover:bg-[var(--accent-hover)] hover:transition-all duration-500"/>
+    <section className="page-shell pb-12 pt-2 md:pb-16 xl:pb-20">
+      <div className="section-wrap">
+        <div className="grid items-center gap-10 xl:grid-cols-[1.05fr_0.95fr] xl:gap-16 xl:pt-10">
+          <div className="order-2 text-center xl:order-none xl:text-left">
+            <span className="section-kicker">Designer + Developer</span>
+
+            <div className="mt-6 space-y-5">
+              <h1 className="h1 max-w-4xl">
+                I build thoughtful digital experiences with a strong eye for
+                <span className="text-[var(--accent)]"> design, motion, and clarity.</span>
+              </h1>
+
+              <p className="max-w-[620px] text-lg leading-8 text-[var(--muted-text)] md:text-xl">
+                I&apos;m Dakota King, a graphic designer and full stack developer focused on polished interfaces, practical systems, and work that feels as good as it functions.
+              </p>
+            </div>
+
+            <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row xl:justify-start">
+              <Button size="lg" asChild className="flex items-center gap-2 bg-[var(--accent)] text-[var(--button-text)] shadow-lg hover:-translate-y-0.5 hover:bg-[var(--accent-hover)]">
+                <Link
+                  href="/assets/resume/DakotaKing-2026Resume.pdf"
+                  download
+                  className="flex items-center gap-2"
+                >
+                  <span className="text-[var(--button-text)]">Download Resume</span>
+                  <FiDownload className="text-xl text-[var(--button-text)]" />
+                </Link>
+              </Button>
+
+              <Button size="lg" asChild className="border border-[var(--border-soft)] bg-white/70 text-[var(--text)] shadow-none hover:-translate-y-0.5 hover:bg-white dark:bg-white/6 dark:text-[var(--text)]">
+                <Link href="/work">View Selected Work</Link>
+              </Button>
+            </div>
+
+            <div className="mt-10 flex flex-col items-center gap-4 xl:items-start">
+              <p className="text-sm font-bold uppercase tracking-[0.24em] text-[var(--muted-text)]">
+                Find me online
+              </p>
+              <div className="mb-2">
+                <Social
+                  containerStyles="flex gap-4"
+                  iconStyles="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border-soft)] bg-[var(--panel)] text-[var(--accent)] shadow-lg backdrop-blur-xl hover:-translate-y-0.5 hover:bg-[var(--accent)] hover:text-[var(--button-text)]"
+                />
               </div>
             </div>
           </div>
-          {/* photo */} 
-          <div className="order-1 xl:order-none mb-8 xl:mb-0">
+
+          <div className="order-1 xl:order-none">
             <Photo />
           </div>
         </div>
       </div>
+
       <Stats />
+
+      <div className="section-wrap mt-6">
+        <div className="grid gap-5 lg:grid-cols-3">
+          <article className="glass-panel rounded-[2rem] p-6">
+            <p className="text-sm font-bold uppercase tracking-[0.24em] text-[var(--accent-text)]">Frontend Focus</p>
+            <h2 className="mt-3 text-2xl font-black">Interfaces that feel refined from the first scroll.</h2>
+            <p className="mt-3 leading-7 text-[var(--muted-text)]">
+              I care about layout rhythm, motion, readability, and the little details that make a site feel intentional.
+            </p>
+          </article>
+
+          <article className="glass-panel rounded-[2rem] p-6">
+            <p className="text-sm font-bold uppercase tracking-[0.24em] text-[var(--accent-text)]">Design Background</p>
+            <h2 className="mt-3 text-2xl font-black">A visual eye shaped by production and branding work.</h2>
+            <p className="mt-3 leading-7 text-[var(--muted-text)]">
+              My design experience helps me bridge aesthetics and implementation without losing either along the way.
+            </p>
+          </article>
+
+          <article className="solid-panel rounded-[2rem] p-6 text-[var(--text)]">
+            <p className="text-sm font-bold uppercase tracking-[0.24em] text-[var(--accent-text)]">Open to Work</p>
+            <h2 className="mt-3 text-2xl font-black">Available for freelance and creative dev projects.</h2>
+            <p className="mt-3 leading-7 text-[var(--muted-text)]">
+              If you need a portfolio site, brand-forward product UI, or a custom frontend build, let&apos;s talk.
+            </p>
+          </article>
+        </div>
+      </div>
     </section>
   );
 }

@@ -12,7 +12,7 @@ function Input({
       type={type}
       data-slot="input"
       className={cn(
-        "flex h-[48px] rounded-md border border-white/10 focus:border-amber-400 font-light bg-blue-950 px-4 py-5 text-base placeholder:text-white/60 outline-none",
+        "flex h-[52px] rounded-2xl border border-[var(--border-soft)] bg-white/70 px-4 py-5 text-base text-[var(--text)] placeholder:text-[var(--muted-text)]/80 outline-none backdrop-blur-sm focus:border-[var(--accent)] dark:bg-white/6",
         className
       )}
       {...props} />

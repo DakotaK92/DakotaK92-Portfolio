@@ -7,14 +7,13 @@ const links = [
   { name: "home", path: "/" },
   { name: "resume", path: "/resume" },
   { name: "work", path: "/work" },
-  //{ name: "contact", path: "/contact" },
 ];
 
 const Nav = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="flex gap-8">
+    <nav className="flex gap-2 rounded-full border border-[var(--border-soft)] bg-[var(--panel)] p-2 backdrop-blur-xl">
       {links.map((link) => {
         const isActive =
           link.path === "/"
@@ -25,10 +24,10 @@ const Nav = () => {
           <Link
             href={link.path}
             key={link.path}
-            className={`capitalize font-bold text-lg transition-all ${
+            className={`rounded-full px-4 py-2 capitalize text-sm font-bold tracking-[0.14em] transition-all ${
               isActive
-                ? "text-[var(--accent)] border-b-2 border-[var(--accent)]"
-                : ""
+                ? "bg-[var(--accent)] text-[var(--button-text)] shadow-lg"
+                : "text-[var(--text)]/80 hover:bg-white/50 hover:text-[var(--text)] dark:hover:bg-white/8"
             }`}
           >
             {link.name}

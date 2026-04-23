@@ -1,47 +1,133 @@
 @import "tailwindcss";
 
 :root {
-  --background: oklch(84.522% 0.0001 271.152);
-  --foreground: oklch(33.569% 0.12696 265.747);
-  --inactive: oklch(21.488% 0.06052 267.324);
+  --background: #f4efe5;
+  --foreground: #ffffff;
+  --inactive: #d9d2c5;
 
-  --text: black;
-  --accent-text: oklch(37.9% 0.146 265.522);
+  --text: #11233f;
+  --muted-text: #55657f;
+  --accent-text: #234c86;
 
-  --button-text: white;
+  --button-text: #fffaf3;
+  --border-soft: rgba(17, 35, 63, 0.12);
+  --panel: rgba(255, 255, 255, 0.78);
+  --panel-strong: #ffffff;
+  --shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
 
-  --accent: oklch(37.9% 0.146 265.522);
-  --accent-hover: oklch(46.736% 0.14842 266.723);
+  --accent: #234c86;
+  --accent-hover: #2e629f;
+  --accent-soft: #dbe7f8;
+  --highlight: #d69b2b;
+  --highlight-soft: #f8e3b5;
 }
 
 .dark {
-  --background: oklch(25.967% 0.00241 248.201); 
-  --foreground: oklch(22.213% 0.00003 271.152);
-  --inactive: oklch(22.213% 0.00003 271.152);
+  --background: #091321;
+  --foreground: #12233d;
+  --inactive: #18304f;
 
-  --text: white;
-  --accent-text: oklch(87.9% 0.169 91.605);
+  --text: #f7f1e6;
+  --muted-text: #b7c3d9;
+  --accent-text: #f0be59;
 
-  --button-text: black;
+  --button-text: #08111f;
+  --border-soft: rgba(240, 241, 245, 0.12);
+  --panel: rgba(14, 27, 46, 0.78);
+  --panel-strong: #102038;
+  --shadow: 0 28px 70px rgba(2, 8, 23, 0.42);
 
-  --accent: oklch(82.8% 0.189 84.429);
-  --accent-hover: oklch(88.93% 0.15934 92.861);
+  --accent: #f0be59;
+  --accent-hover: #ffd68b;
+  --accent-soft: rgba(240, 190, 89, 0.16);
+  --highlight: #8ab4f8;
+  --highlight-soft: rgba(138, 180, 248, 0.16);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
-  font-family: 'Roboto', sans-serif;
+  background-image:
+    radial-gradient(circle at top left, rgba(214, 155, 43, 0.14), transparent 28%),
+    radial-gradient(circle at 85% 15%, rgba(35, 76, 134, 0.18), transparent 32%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.38), transparent 38%);
+  font-family: "Roboto", sans-serif;
   color: var(--text);
+  min-height: 100vh;
+}
+
+a,
+button,
+input,
+textarea {
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
 }
 
 @layer base {
-  .h1{
+  * {
+    @apply border-transparent;
+  }
+
+  .h1 {
     @apply text-[48px] xl:text-[80px] leading-[1.1] font-extrabold;
   }
-  .h2{
+  .h2 {
     @apply text-[36px] xl:text-[48px] leading-[1.1] font-bold;
   }
-  .h3{
+  .h3 {
     @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+  }
+}
+
+@layer utilities {
+  .page-shell {
+    @apply relative overflow-hidden;
+  }
+
+  .section-wrap {
+    @apply container mx-auto px-4 md:px-6;
+  }
+
+  .glass-panel {
+    background: var(--panel);
+    border: 1px solid var(--border-soft);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(18px);
+  }
+
+  .solid-panel {
+    background: var(--panel-strong);
+    border: 1px solid var(--border-soft);
+    box-shadow: var(--shadow);
+  }
+
+  .section-kicker {
+    color: var(--accent-text);
+    @apply inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[0.28em];
+    background: color-mix(in srgb, var(--accent-soft) 88%, transparent);
+  }
+
+  .section-title {
+    @apply text-3xl font-black md:text-4xl xl:text-5xl;
+  }
+
+  .section-copy {
+    color: var(--muted-text);
+    @apply text-base leading-8 md:text-lg;
+  }
+
+  .soft-grid {
+    background-image:
+      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
   }
 }

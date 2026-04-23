@@ -1,6 +1,6 @@
 "use client"
 
-import { 
+import {
   FaHtml5,
   FaCss3,
   FaJs,
@@ -8,17 +8,20 @@ import {
   FaNodeJs
 } from "react-icons/fa";
 
-import { 
-  SiAdobecreativecloud, 
-  SiTailwindcss, 
-  SiNextdotjs 
+import {
+  SiAdobecreativecloud,
+  SiTailwindcss,
+  SiNextdotjs
 } from "react-icons/si";
 
-// about data
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../../components/ui/tooltip";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "../../components/ui/tabs";
+import { ScrollArea } from "../../components/ui/scroll-area";
+
 const about = {
   title: "About Me",
   description:
-    "I’m a full-stack web developer with a background in graphic design and production, allowing me to approach development with both technical precision and strong visual awareness. I specialize in building responsive, performance-focused applications using React, Next.js, and modern UI frameworks. My experience in fast-paced production environments has strengthened my problem-solving skills, attention to detail, and ability to deliver high-quality work under tight deadlines.",
+    "I'm a full-stack web developer with a background in graphic design and production, allowing me to approach development with both technical precision and strong visual awareness. I specialize in building responsive, performance-focused applications using React, Next.js, and modern UI frameworks. My experience in fast-paced production environments has strengthened my problem-solving skills, attention to detail, and ability to deliver high-quality work under tight deadlines.",
   info: [
     { fieldName: "Name:", fieldValue: "Dakota King" },
     { fieldName: "Experience:", fieldValue: "2 Years" },
@@ -30,27 +33,25 @@ const about = {
   ],
 };
 
-// experience data
 const experience = {
-  title: 'My Experience',
-  description: 
+  title: "My Experience",
+  description:
     "A blend of development, production design, and customer-focused roles that have strengthened both my technical and collaborative skillsets.",
-  // list of experience items
   items: [
     {
       company: "Walt Disney World - Orlando, FL",
       position: "Disney College Program",
-      duration: "Jan 2026 – Aug 2026",
+      duration: "Jan 2026 - Aug 2026",
     },
     {
       company: "FASTSIGNS - Lakeland, FL",
       position: "Graphic Design & Production",
-      duration: "Mar 2025 – Sept 2025",
+      duration: "Mar 2025 - Sept 2025",
     },
     {
       company: "FASTSIGNS - Carrollton, TX",
       position: "Graphic Design & Production",
-      duration: "Sept 2022 – Mar 2025",
+      duration: "Sept 2022 - Mar 2025",
     },
     {
       company: "Signarama - McKinney, TX",
@@ -65,15 +66,14 @@ const experience = {
     {
       company: "Target - Rockwall, TX",
       position: "Tech Associate",
-      duration: "Marck 2016 - November 2020",
+      duration: "March 2016 - November 2020",
     },
   ],
 };
 
 const education = {
-  title: 'My Education',
-  description: 
-  'Formal education combined with hands-on development training.',
+  title: "My Education",
+  description: "Formal education combined with hands-on development training.",
   items: [
     {
       institution: "edX - Southern Methodist University (SMU)",
@@ -92,111 +92,67 @@ const skills = {
   title: "My Skills",
   description:
     "A blend of frontend, backend, and design tools that allow me to build complete, polished web experiences.",
-    skillList: [
-      { icon: <FaHtml5 /> },
-      { icon: <FaCss3 /> },
-      { icon: <FaJs /> },
-      { icon: <FaReact /> },
-      { icon: <SiNextdotjs /> },
-      { icon: <SiTailwindcss /> },
-      { icon: <FaNodeJs /> },
-      { icon: <SiAdobecreativecloud /> },
-    ]
+  skillList: [
+    { icon: <FaHtml5 />, name: "HTML5" },
+    { icon: <FaCss3 />, name: "CSS3" },
+    { icon: <FaJs />, name: "JavaScript" },
+    { icon: <FaReact />, name: "React" },
+    { icon: <SiNextdotjs />, name: "Next.js" },
+    { icon: <SiTailwindcss />, name: "Tailwind CSS" },
+    { icon: <FaNodeJs />, name: "Node.js" },
+    { icon: <SiAdobecreativecloud />, name: "Adobe Creative Cloud" },
+  ]
 };
-
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../../components/ui/tooltip";
-
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "../../components/ui/tabs";
-
-import { ScrollArea } from "../../components/ui/scroll-area";
-import { motion } from "framer-motion";
 
 const Resume = () => {
   return (
-    <div>
-      <motion.div
+    <section className="page-shell py-12 xl:py-16">
+      <div
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
-          transition: { delay: 1.5, duration: 0.4, ease: "easeIn" },
+          transition: { duration: 0.4},
         }}
-        className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+        className="section-wrap min-h-[80vh] flex items-center justify-center"
       >
-        {/* Sidebar */}
-        <div className="container mx-auto">
-          <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px] p-4">
-            <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0">
-              <TabsTrigger
-                value="experience"
-                className="cursor-pointer 
-                  text-muted-foreground 
-                  dark:text-muted-foreground
-                  data-[state=active]:text-foreground
-                  dark:data-[state=active]:text-[var(--button-text)]"
-              >
-                Experience
-              </TabsTrigger>
+        <div className="w-full">
+          <div className="mb-8 max-w-3xl">
+            <span className="section-kicker">Resume</span>
+            <h1 className="section-title mt-5">A quick snapshot of my experience, education, and skillset.</h1>
+            <p className="section-copy mt-4">
+              This section is designed to make it easy to scan the parts of my background that matter most, from hands-on production experience to modern frontend development work.
+            </p>
+          </div>
 
-              <TabsTrigger
-                value="education"
-                className="cursor-pointer 
-                  text-muted-foreground 
-                  dark:text-muted-foreground
-                  data-[state=active]:text-foreground
-                  dark:data-[state=active]:text-[var(--button-text)]"
-              >
-                Education
-              </TabsTrigger>
-
-              <TabsTrigger
-                value="skills"
-                className="cursor-pointer 
-                  text-muted-foreground 
-                  dark:text-muted-foreground
-                  data-[state=active]:text-foreground
-                  dark:data-[state=active]:text-[var(--button-text)]"
-              >
-                Skills
-              </TabsTrigger>
-
-              <TabsTrigger
-                value="about"
-                className="cursor-pointer 
-                  text-muted-foreground 
-                  dark:text-muted-foreground
-                  data-[state=active]:text-foreground
-                  dark:data-[state=active]:text-[var(--button-text)]"
-              >
-                About me
-              </TabsTrigger>
+          <Tabs defaultValue="experience" className="flex flex-col gap-[60px] p-4 xl:flex-row">
+            <TabsList className="mx-auto flex w-full max-w-[380px] flex-col xl:mx-0">
+              <TabsTrigger value="experience">Experience</TabsTrigger>
+              <TabsTrigger value="education">Education</TabsTrigger>
+              <TabsTrigger value="skills">Skills</TabsTrigger>
+              <TabsTrigger value="about">About me</TabsTrigger>
             </TabsList>
 
-
-            {/* Content */}
             <div className="min-h-[70vh] w-full">
-
-              {/* Experience */}
               <TabsContent value="experience" className="w-full">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold text-[var(--text)]">{experience.title}</h3>
-                  <p className="max-w-[600px] text-[var(--text)] mx-auto xl:mx-0">{experience.description}</p>
+                  <p className="mx-auto max-w-[600px] text-[var(--muted-text)] xl:mx-0">{experience.description}</p>
 
                   <ScrollArea className="h-[400px]">
-                    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                    <ul className="grid grid-cols-1 gap-[30px] lg:grid-cols-2">
                       {experience.items.map((item, index) => {
                         return (
-                          <li key={index} className="bg-[var(--foreground)] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
-                            <span className="text-amber-400">
+                          <li key={index} className="glass-panel flex h-[184px] flex-col items-center justify-center gap-1 rounded-[1.5rem] px-8 py-6 lg:items-start">
+                            <span className="font-semibold text-[var(--highlight)]">
                               {item.duration}
                             </span>
-                            <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left text-white">
+                            <h3 className="min-h-[60px] max-w-[260px] text-center text-xl font-black text-[var(--text)] lg:text-left">
                               {item.position}
                             </h3>
 
                             <div className="flex items-center gap-3">
-                              {/* line accent */}
-                              <span className="w-[40px] h-[6px] rounded-full bg-amber-400"></span>
-                              <p className="text-white/60">{item.company}</p>
+                              <span className="h-[6px] w-[40px] rounded-full bg-[var(--accent)]"></span>
+                              <p className="text-[var(--muted-text)]">{item.company}</p>
                             </div>
                           </li>
                         )
@@ -206,22 +162,20 @@ const Resume = () => {
                 </div>
               </TabsContent>
 
-              {/* Education */}
               <TabsContent value="education" className="w-full">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <h3 className="text-4xl font-bold">{education.title}</h3>
-                  <p className="max-w-[600px] text-[var(--text)] mx-auto xl:mx-0">{education.description}</p>
+                  <h3 className="text-4xl font-bold text-[var(--text)]">{education.title}</h3>
+                  <p className="mx-auto max-w-[600px] text-[var(--muted-text)] xl:mx-0">{education.description}</p>
                   <ScrollArea className="h-[400px]">
-                    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                    <ul className="grid grid-cols-1 gap-[30px] lg:grid-cols-2">
                       {education.items.map((item, index) => {
                         return (
-                          <li key={index} className="bg-[var(--foreground)] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
-                            <span className="text-amber-400">{item.duration}</span>
-                            <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left text-white">{item.degree}</h3>
+                          <li key={index} className="glass-panel flex h-[184px] flex-col items-center justify-center gap-1 rounded-[1.5rem] px-8 py-6 lg:items-start">
+                            <span className="font-semibold text-[var(--highlight)]">{item.duration}</span>
+                            <h3 className="min-h-[60px] max-w-[260px] text-center text-xl font-black text-[var(--text)] lg:text-left">{item.degree}</h3>
                             <div className="flex items-center gap-3">
-                              {/* line accent */}
-                              <span className="w-[40px] h-[6px] rounded-full bg-amber-400"></span>
-                              <p className="text-white/60">{item.institution}</p>
+                              <span className="h-[6px] w-[40px] rounded-full bg-[var(--accent)]"></span>
+                              <p className="text-[var(--muted-text)]">{item.institution}</p>
                             </div>
                           </li>
                         )
@@ -231,39 +185,44 @@ const Resume = () => {
                 </div>
               </TabsContent>
 
-              {/* Skills */}
-              <TabsContent value="skills" className="w-full h-full">
+              <TabsContent value="skills" className="h-full w-full">
                 <div className="flex flex-col gap-[30px]">
-                    <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                      <h3 className="text-4xl font-bold text-[var(--text)]">{skills.title}</h3>
-                      <h3 className="max-w-[600px] text-[var(--text)] mx-auto xl:mx-0">{skills.description}</h3>
-                    </div>
-                    <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] gap-4">
-                      {skills.skillList.map((skill, index) => {
-                        return <li key={index}>
+                  <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                    <h3 className="text-4xl font-bold text-[var(--text)]">{skills.title}</h3>
+                    <p className="mx-auto max-w-[600px] text-[var(--muted-text)] xl:mx-0">{skills.description}</p>
+                  </div>
+                  <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]">
+                    {skills.skillList.map((skill, index) => {
+                      return (
+                        <li key={index}>
                           <TooltipProvider delayDuration={100}>
                             <Tooltip>
-                              <TooltipTrigger className="w-full h-[150px] bg-[var(--foreground)] rounded-xl flex justify-center items-center group">
-                                <div className="text-6xl group-hover:text-amber-400 transition-all duration-300 text-white">{skill.icon}</div>
+                              <TooltipTrigger className="glass-panel group flex h-[150px] w-full flex-col items-center justify-center gap-3 rounded-[1.5rem]">
+                                <div className="text-6xl text-[var(--accent)] transition-all duration-300 group-hover:text-[var(--highlight)]" aria-hidden="true">{skill.icon}</div>
+                                <span className="text-center text-sm font-bold uppercase tracking-[0.16em] text-[var(--muted-text)]">{skill.name}</span>
+                                <span className="sr-only">{skill.name}</span>
                               </TooltipTrigger>
+                              <TooltipContent>
+                                <p>{skill.name}</p>
+                              </TooltipContent>
                             </Tooltip>
                           </TooltipProvider>
                         </li>
-                      })}
-                    </ul>
+                      )
+                    })}
+                  </ul>
                 </div>
               </TabsContent>
 
-              {/* About */}
               <TabsContent value="about" className="w-full text-center xl:text-left">
                 <div className="flex flex-col gap-[30px]">
                   <h3 className="text-4xl font-bold text-[var(--text)]">{about.title}</h3>
-                  <p className="max-h-[600px] text-[var(--text)] mx-auto xl:mx-0">{about.description}</p>
-                  <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                  <p className="mx-auto max-h-[600px] leading-8 text-[var(--muted-text)] xl:mx-0">{about.description}</p>
+                  <ul className="mx-auto grid max-w-[620px] grid-cols-1 gap-y-6 xl:mx-0 xl:grid-cols-2">
                     {about.info.map((item,index) => {
                       return (
-                        <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
-                          <span className="text-[var(--text)] text-semibold">{item.fieldName}</span>
+                        <li key={index} className="glass-panel flex items-center justify-center gap-4 rounded-[1.25rem] px-5 py-4 xl:justify-start">
+                          <span className="font-semibold text-[var(--text)]">{item.fieldName}</span>
                           <span className="text-xl text-[var(--accent)]">{item.fieldValue}</span>
                         </li>
                       )
@@ -274,8 +233,8 @@ const Resume = () => {
             </div>
           </Tabs>
         </div>
-      </motion.div>
-    </div>
+      </div>
+    </section>
   )
 }
 

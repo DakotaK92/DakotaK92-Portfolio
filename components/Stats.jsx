@@ -6,39 +6,45 @@ const stats = [
     {
         num: 2,
         text: "Years of Experience",
+        suffix: "+",
     },
     {
         num: 5,
-        text: "Projects completed",
+        text: "Projects Completed",
+        suffix: "+",
     },
     {
         num: 8,
-        text: "Technologies mastered",
+        text: "Technologies Used",
+        suffix: "+",
     },
     {
         num: 840,
         text: "Code Commits",
+        suffix: "+",
     },
 ]
 
 const Stats = () => {
   return (
-    <section className="pt-4 pb-12 xl:pt-0 xl:pb-16">
-      <div className="container mx-auto">
-        <div className="flex flex-wrap gap-6 max-w-[80vw] mx-auto xl:max-w-none">
+    <section className="py-6 xl:py-10">
+      <div className="section-wrap">
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {stats.map((item, index) => {
                 return (
-                    <div className="flex-1 flex gap-4 items-center justify-center xl:justify-start" key={index}>
-                        <CountUp 
-                            end={item.num}
-                            duration={5}
-                            delay={2}
-                            className="text-4xl xl:text-6xl font-extrabold text-[var(--accent)]"
-                        />
-                        <p className={`${item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"
-                        } leading-snug text-[var(--accent)]`}
-                        >
-                            {item.text}
+                    <div className="glass-panel rounded-[1.75rem] px-6 py-6" key={index}>
+                        <div className="mb-3 h-1.5 w-14 rounded-full bg-[var(--highlight)]" />
+                        <div className="flex items-end gap-2">
+                          <CountUp
+                              end={item.num}
+                              duration={4}
+                              delay={1.2}
+                              className="text-4xl font-extrabold text-[var(--accent)] xl:text-5xl"
+                          />
+                          <span className="pb-1 text-lg font-bold text-[var(--highlight)]">{item.suffix}</span>
+                        </div>
+                        <p className="mt-3 max-w-[180px] leading-snug text-[var(--muted-text)]">
+                          {item.text}
                         </p>
                     </div>
                 )

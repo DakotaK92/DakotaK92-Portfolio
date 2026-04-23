@@ -18,6 +18,10 @@ export async function sendEmail(formData) {
       return { success: false, error: "Missing required fields." };
     }
 
+    if (!process.env.RESEND_API_KEY) {
+      return { success: false, error: "Email service is not configured yet." };
+    }
+
     await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
       to: "dakotaking92@gmail.com",
