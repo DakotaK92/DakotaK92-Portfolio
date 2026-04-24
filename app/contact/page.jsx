@@ -52,7 +52,7 @@ const Contact = () => {
             <span className="section-kicker">Get In Touch</span>
             <h2 className="mt-5 text-4xl font-black">Let&apos;s build something sharp, useful, and memorable.</h2>
             <p className="mt-4 leading-8 text-[var(--muted-text)]">
-              Whether you need a portfolio refresh, a polished product interface, or design support that can move into code, I&apos;m open to freelance collaborations and creative partnerships.
+              Whether you need a portfolio refresh, a polished product interface, or design support that can move into code, I&apos;m open to freelance projects and creative collaborations.
             </p>
 
             <div className="mt-8 grid gap-4">
@@ -82,7 +82,7 @@ const Contact = () => {
               </h3>
 
               <p className="text-[var(--muted-text)]">
-                Send a quick note with your project, timeline, or goal and I&apos;ll get back to you as soon as I can.
+                Send a quick note with your project, goals, or timeline, and I&apos;ll get back to you as soon as I can.
               </p>
 
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">

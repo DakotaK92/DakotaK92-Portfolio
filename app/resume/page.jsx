@@ -14,14 +14,13 @@ import {
   SiNextdotjs
 } from "react-icons/si";
 
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../../components/ui/tooltip";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "../../components/ui/tabs";
 import { ScrollArea } from "../../components/ui/scroll-area";
 
 const about = {
   title: "About Me",
   description:
-    "I'm a full-stack web developer with a background in graphic design and production, allowing me to approach development with both technical precision and strong visual awareness. I specialize in building responsive, performance-focused applications using React, Next.js, and modern UI frameworks. My experience in fast-paced production environments has strengthened my problem-solving skills, attention to detail, and ability to deliver high-quality work under tight deadlines.",
+    "I'm a full-stack web developer with a background in graphic design and production, which gives me a mix of technical problem-solving and strong visual awareness. I specialize in building responsive, performance-focused interfaces with React, Next.js, and modern UI tools. Working in fast-paced production environments has strengthened my attention to detail, adaptability, and ability to deliver polished work on tight timelines.",
   info: [
     { fieldName: "Name:", fieldValue: "Dakota King" },
     { fieldName: "Experience:", fieldValue: "2 Years" },
@@ -36,22 +35,22 @@ const about = {
 const experience = {
   title: "My Experience",
   description:
-    "A blend of development, production design, and customer-focused roles that have strengthened both my technical and collaborative skillsets.",
+    "A blend of development, production design, and customer-facing roles that have strengthened both my technical skillset and how I collaborate with teams and clients.",
   items: [
     {
       company: "Walt Disney World - Orlando, FL",
       position: "Disney College Program",
-      duration: "Jan 2026 - Aug 2026",
+      duration: "January 2026 - August 2026",
     },
     {
       company: "FASTSIGNS - Lakeland, FL",
       position: "Graphic Design & Production",
-      duration: "Mar 2025 - Sept 2025",
+      duration: "March 2025 - September 2025",
     },
     {
       company: "FASTSIGNS - Carrollton, TX",
       position: "Graphic Design & Production",
-      duration: "Sept 2022 - Mar 2025",
+      duration: "September 2022 - March 2025",
     },
     {
       company: "Signarama - McKinney, TX",
@@ -73,12 +72,12 @@ const experience = {
 
 const education = {
   title: "My Education",
-  description: "Formal education combined with hands-on development training.",
+  description: "Formal design education paired with hands-on frontend and full stack development training.",
   items: [
     {
       institution: "edX - Southern Methodist University (SMU)",
       degree: "Full Stack Developer Boot-camp",
-      duration: "Nov. 2023 - May 2024",
+      duration: "November 2023 - May 2024",
     },
     {
       institution: "Collin College Community College",
@@ -91,7 +90,7 @@ const education = {
 const skills = {
   title: "My Skills",
   description:
-    "A blend of frontend, backend, and design tools that allow me to build complete, polished web experiences.",
+    "A practical mix of frontend, backend, and design tools that helps me build polished digital experiences from concept to launch.",
   skillList: [
     { icon: <FaHtml5 />, name: "HTML5" },
     { icon: <FaCss3 />, name: "CSS3" },
@@ -120,7 +119,7 @@ const Resume = () => {
             <span className="section-kicker">Resume</span>
             <h1 className="section-title mt-5">A quick snapshot of my experience, education, and skillset.</h1>
             <p className="section-copy mt-4">
-              This section is designed to make it easy to scan the parts of my background that matter most, from hands-on production experience to modern frontend development work.
+              This section is built to make the most relevant parts of my background easy to scan, from hands-on production experience to modern frontend development work.
             </p>
           </div>
 
@@ -195,33 +194,25 @@ const Resume = () => {
                     {skills.skillList.map((skill, index) => {
                       return (
                         <li key={index}>
-                          <TooltipProvider delayDuration={100}>
-                            <Tooltip>
-                              <TooltipTrigger className="glass-panel group flex h-[150px] w-full flex-col items-center justify-center gap-3 rounded-[1.5rem]">
-                                <div className="text-6xl text-[var(--accent)] transition-all duration-300 group-hover:text-[var(--highlight)]" aria-hidden="true">{skill.icon}</div>
-                                <span className="text-center text-sm font-bold uppercase tracking-[0.16em] text-[var(--muted-text)]">{skill.name}</span>
-                                <span className="sr-only">{skill.name}</span>
-                              </TooltipTrigger>
-                              <TooltipContent>
-                                <p>{skill.name}</p>
-                              </TooltipContent>
-                            </Tooltip>
-                          </TooltipProvider>
+                          <div className="glass-panel group flex h-[150px] w-full flex-col items-center justify-center gap-3 rounded-[1.5rem]">
+                            <div className="text-6xl text-[var(--accent)] transition-all duration-300 group-hover:text-[var(--highlight)]" aria-hidden="true">{skill.icon}</div>
+                            <span className="text-center text-sm font-bold uppercase tracking-[0.16em] text-[var(--muted-text)]">{skill.name}</span>
+                          </div>
                         </li>
                       )
                     })}
                   </ul>
                 </div>
               </TabsContent>
-
+              
               <TabsContent value="about" className="w-full text-center xl:text-left">
                 <div className="flex flex-col gap-[30px]">
                   <h3 className="text-4xl font-bold text-[var(--text)]">{about.title}</h3>
                   <p className="mx-auto max-h-[600px] leading-8 text-[var(--muted-text)] xl:mx-0">{about.description}</p>
-                  <ul className="mx-auto grid max-w-[620px] grid-cols-1 gap-y-6 xl:mx-0 xl:grid-cols-2">
+                  <ul className="mx-auto mt-2 grid max-w-[680px] grid-cols-1 gap-6 xl:mx-0 xl:grid-cols-2">
                     {about.info.map((item,index) => {
                       return (
-                        <li key={index} className="glass-panel flex items-center justify-center gap-4 rounded-[1.25rem] px-5 py-4 xl:justify-start">
+                        <li key={index} className="glass-panel flex items-center justify-center gap-4 rounded-[1.25rem] px-6 py-5 xl:justify-start">
                           <span className="font-semibold text-[var(--text)]">{item.fieldName}</span>
                           <span className="text-xl text-[var(--accent)]">{item.fieldValue}</span>
                         </li>

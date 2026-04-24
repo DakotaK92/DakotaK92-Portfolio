@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const featuredProject = {
   title: "Dakota King Portfolio",
   description:
-    "A self-directed portfolio redesign focused on stronger hierarchy, modern motion, and a more editorial presentation of both development and design work.",
+    "A self-directed portfolio redesign focused on clearer hierarchy, stronger visual storytelling, and a more editorial presentation of both development and design work.",
   video: "/assets/intro-videob_1.mp4",
   tools: [
     { name: "React", color: "bg-sky-100 text-sky-700" },
@@ -23,7 +23,7 @@ const projects = [
     id: 1,
     title: "MyPocketBard",
     description:
-      "AI-powered songwriting assistant with lyric generation and rhyme tools.",
+      "An AI-powered songwriting tool designed to help users generate lyrics, explore rhyme ideas, and move from blank page to rough draft faster.",
     image: "/assets/work/development-image-1.jpg",
     tools: [
       { name: "React", color: "bg-sky-100 text-sky-700" },
@@ -38,7 +38,7 @@ const projects = [
     id: 2,
     title: "Duncanville Bookstore App",
     description:
-      "Mobile app for browsing comics store events, earn rewards for shopping and looking up comic book info.",
+      "A mobile app concept for browsing events, tracking rewards, and making it easier for comic fans to stay connected with a local shop.",
     image: "/assets/work/design-image-1.jpg",
     tools: [
       { name: "React-Native", color: "bg-sky-100 text-sky-700" },
@@ -53,7 +53,7 @@ const projects = [
     id: 3,
     title: "Dakota King Portfolio",
     description:
-      "Personal portfolio website showcasing projects and skills.",
+      "A personal portfolio built to showcase both frontend development and design work through a more polished, brand-aware experience.",
     image: "/assets/work/development-image-3.jpg",
     tools: [
       { name: "Framer Motion", color: "bg-pink-100 text-pink-700" },
@@ -71,7 +71,7 @@ const designs = [
     id: 1,
     title: "Duncanville Bookstore",
     description:
-      "Rebrand and new identity for local bookstore with modern, fun and approachable design.",
+      "A rebrand and identity refresh for a local bookstore, built around a modern, playful, and more approachable visual direction.",
     image: "/assets/work/design-image-1.jpg",
     tools: [
       { name: "Illustrator", color: "bg-orange-200 text-gray-900" },
@@ -84,7 +84,7 @@ const designs = [
     id: 2,
     title: "Lick",
     description:
-      "Ice cream brand identity and packaging design. Final project for branding degree.",
+      "An ice cream brand identity and packaging system created as a final branding project, focused on personality, packaging, and shelf appeal.",
     image: "/assets/work/design-image-2.jpg",
     tools: [
       { name: "Illustrator", color: "bg-orange-200 text-gray-900" },
@@ -97,7 +97,7 @@ const designs = [
     id: 3,
     title: "Dicey Dice",
     description:
-      "Logo and branding for a tie-dye inspired clothing line with DnD-themed artwork.",
+      "A logo and brand concept for a tie-dye inspired clothing line with DnD-themed artwork and a more expressive, character-led tone.",
     image: "/assets/work/design-image-3.jpg",
     tools: [
       { name: "Illustrator", color: "bg-orange-200 text-gray-900" },
@@ -123,7 +123,7 @@ const Works = () => {
           <span className="section-kicker">Selected Work</span>
           <h1 className="section-title mt-5">Projects that combine frontend craft with visual thinking.</h1>
           <p className="section-copy mt-4">
-            A mix of development work, product concepts, and brand-led design pieces. Each project reflects the way I like to build: clean systems, expressive presentation, and practical execution.
+            A mix of development work, product concepts, and brand-led design pieces. Each project reflects the way I like to work: clean systems, expressive presentation, and practical execution.
           </p>
         </div>
 
@@ -148,6 +148,10 @@ const Works = () => {
 
             <p className="mt-4 leading-8 text-[var(--muted-text)]">
               {featuredProject.description}
+            </p>
+
+            <p className="mt-4 text-sm leading-7 text-[var(--muted-text)]">
+              Role: UI design, frontend development, component styling, responsive layout, and content direction.
             </p>
 
             <div className="mt-6">

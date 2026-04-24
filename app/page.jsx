@@ -21,7 +21,7 @@ export default function Home() {
               </h1>
 
               <p className="max-w-[620px] text-lg leading-8 text-[var(--muted-text)] md:text-xl">
-                I&apos;m Dakota King, a graphic designer and full stack developer focused on polished interfaces, practical systems, and work that feels as good as it functions.
+                I&apos;m Dakota King, a graphic designer and full stack developer who builds polished interfaces, practical frontend systems, and portfolio-ready experiences with equal attention to aesthetics and usability.
               </p>
             </div>
 
@@ -69,7 +69,7 @@ export default function Home() {
             <p className="text-sm font-bold uppercase tracking-[0.24em] text-[var(--accent-text)]">Frontend Focus</p>
             <h2 className="mt-3 text-2xl font-black">Interfaces that feel refined from the first scroll.</h2>
             <p className="mt-3 leading-7 text-[var(--muted-text)]">
-              I care about layout rhythm, motion, readability, and the little details that make a site feel intentional.
+              I care about layout rhythm, motion, readability, and the details that make an interface feel considered instead of assembled.
             </p>
           </article>
 
@@ -77,7 +77,7 @@ export default function Home() {
             <p className="text-sm font-bold uppercase tracking-[0.24em] text-[var(--accent-text)]">Design Background</p>
             <h2 className="mt-3 text-2xl font-black">A visual eye shaped by production and branding work.</h2>
             <p className="mt-3 leading-7 text-[var(--muted-text)]">
-              My design experience helps me bridge aesthetics and implementation without losing either along the way.
+              My background in design helps me bridge aesthetics and implementation without sacrificing clarity, consistency, or craft.
             </p>
           </article>
 
@@ -85,7 +85,7 @@ export default function Home() {
             <p className="text-sm font-bold uppercase tracking-[0.24em] text-[var(--accent-text)]">Open to Work</p>
             <h2 className="mt-3 text-2xl font-black">Available for freelance and creative dev projects.</h2>
             <p className="mt-3 leading-7 text-[var(--muted-text)]">
-              If you need a portfolio site, brand-forward product UI, or a custom frontend build, let&apos;s talk.
+              If you need a portfolio site, brand-forward product UI, or a custom frontend build that feels polished and personal, let&apos;s talk.
             </p>
           </article>
         </div>
