@@ -19,8 +19,7 @@ const Photo = () => {
         transition-opacity duration-500 ease-out
         ${isVisible ? "opacity-100" : "opacity-0"}`}
       >
-        <div className="absolute inset-6 rounded-full border border-[var(--border-soft)] bg-[var(--panel)] shadow-[var(--shadow)]" />
-        <div className="absolute inset-0 rounded-full border border-[var(--accent)]/15" />
+        <div className="absolute inset-8 rounded-full border border-[var(--border-soft)] bg-[var(--panel)] shadow-[var(--shadow)]" />
         <Image
           src="/assets/DakotaKPic2.png"
           priority
