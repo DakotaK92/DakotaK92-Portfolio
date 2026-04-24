@@ -22,6 +22,9 @@ const links = [
         name: 'contact',
         path: '/contact',
     },
+    {   name: "services",
+        path: "/services" 
+    },
 ];
 
 const TabNav = () => {
