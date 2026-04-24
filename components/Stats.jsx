@@ -19,7 +19,7 @@ const stats = [
         suffix: "+",
     },
     {
-        num: 840,
+        num: 850,
         text: "Code Commits",
         suffix: "+",
     },
