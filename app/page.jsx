@@ -26,18 +26,18 @@ export default function Home() {
             </div>
 
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row xl:justify-start">
-              <Button size="lg" asChild className="flex items-center gap-2 bg-[var(--accent)] text-[var(--button-text)] shadow-lg hover:-translate-y-0.5 hover:bg-[var(--accent-hover)]">
+              <Button size="lg" asChild className="flex items-center gap-2 bg-[var(--accent)] text-[var(--button-text)] shadow-lg hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] hover:text-black">
                 <Link
                   href="/assets/resume/DakotaKing-2026Resume.pdf"
                   download
                   className="flex items-center gap-2"
                 >
-                  <span className="text-[var(--button-text)]">Download Resume</span>
-                  <FiDownload className="text-xl text-[var(--button-text)]" />
+                  <span>Download Resume</span>
+                  <FiDownload className="text-xl" />
                 </Link>
               </Button>
 
-              <Button size="lg" asChild className="border border-[var(--border-soft)] bg-white/70 text-[var(--text)] shadow-none hover:-translate-y-0.5 hover:bg-white dark:bg-white/6 dark:text-[var(--text)]">
+              <Button size="lg" asChild className="border border-[var(--border-soft)] bg-white/70 text-[var(--text)] shadow-none hover:-translate-y-0.5 hover:bg-white hover:text-black dark:bg-white/6 dark:text-[var(--text)]">
                 <Link href="/work">View Selected Work</Link>
               </Button>
             </div>

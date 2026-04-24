@@ -2,8 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 
 // Components
@@ -11,24 +9,14 @@ import Nav from "./Nav";
 import MobileNav from "./MobileNav";
 
 const Header = () => {
-  const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
-
-  const logoSrc =
-    mounted && resolvedTheme === "dark"
-      ? "/assets/king-crown-white.png"
-      : "/assets/king-crown-blue.png";
-
   return (
-    <header className="sticky top-0 z-40 px-4 py-5 transition-colors duration-300 md:px-6 xl:py-7">
-      <div className="container mx-auto flex justify-between items-center">
+    <header className="sticky top-0 z-40 px-4 py-4 transition-colors duration-300 md:px-6 xl:py-5">
+      <div className="glass-panel container mx-auto flex items-center justify-between rounded-full px-5 py-3 md:px-7">
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src={logoSrc}
+            src="/assets/king-crown-white.png"
             alt="Dakota King logo"
             width={304}
             height={78}

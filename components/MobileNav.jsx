@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from './ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from './ui/sheet';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { CiMenuFries } from "react-icons/ci";
@@ -26,6 +26,7 @@ const MobileNav = () => {
       </SheetTrigger>
 
       <SheetContent className="flex flex-col p-3">
+        <SheetTitle className="sr-only">Site navigation</SheetTitle>
         <Link href="/" className="mt-20 flex justify-center">
           <Image
             src="/assets/king-crown-white.png"

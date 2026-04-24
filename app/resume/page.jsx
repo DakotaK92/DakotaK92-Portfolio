@@ -124,8 +124,8 @@ const Resume = () => {
             </p>
           </div>
 
-          <Tabs defaultValue="experience" className="flex flex-col gap-[60px] p-4 xl:flex-row">
-            <TabsList className="mx-auto flex w-full max-w-[380px] flex-col xl:mx-0">
+          <Tabs defaultValue="experience" className="flex flex-col gap-8 p-4 xl:flex-row xl:items-start">
+            <TabsList className="mx-auto flex w-full max-w-[320px] flex-col xl:mx-0 xl:self-start">
               <TabsTrigger value="experience">Experience</TabsTrigger>
               <TabsTrigger value="education">Education</TabsTrigger>
               <TabsTrigger value="skills">Skills</TabsTrigger>

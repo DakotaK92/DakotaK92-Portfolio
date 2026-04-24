@@ -1,28 +1,6 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f4efe5;
-  --foreground: #ffffff;
-  --inactive: #d9d2c5;
-
-  --text: #11233f;
-  --muted-text: #55657f;
-  --accent-text: #234c86;
-
-  --button-text: #fffaf3;
-  --border-soft: rgba(17, 35, 63, 0.12);
-  --panel: rgba(255, 255, 255, 0.78);
-  --panel-strong: #ffffff;
-  --shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
-
-  --accent: #234c86;
-  --accent-hover: #2e629f;
-  --accent-soft: #dbe7f8;
-  --highlight: #d69b2b;
-  --highlight-soft: #f8e3b5;
-}
-
-.dark {
   --background: #091321;
   --foreground: #12233d;
   --inactive: #18304f;
@@ -51,9 +29,9 @@ html {
 body {
   background: var(--background);
   background-image:
-    radial-gradient(circle at top left, rgba(214, 155, 43, 0.14), transparent 28%),
-    radial-gradient(circle at 85% 15%, rgba(35, 76, 134, 0.18), transparent 32%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.38), transparent 38%);
+    radial-gradient(circle at top left, rgba(240, 190, 89, 0.16), transparent 28%),
+    radial-gradient(circle at 85% 15%, rgba(138, 180, 248, 0.16), transparent 32%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 38%);
   font-family: "Roboto", sans-serif;
   color: var(--text);
   min-height: 100vh;

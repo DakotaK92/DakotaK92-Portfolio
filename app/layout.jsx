@@ -2,7 +2,6 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { ThemeProvider } from "next-themes";
 
 // components
 import Header from "../components/Header";
@@ -28,20 +27,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body className={`${roboto.variable}`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem={true}
-        >
-          <Header />
-          <main>
-            {children}
-          </main>
-          <Footer />
-          <SpeedInsights />
-        </ThemeProvider>
+        <Header />
+        <main>
+          {children}
+        </main>
+        <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );

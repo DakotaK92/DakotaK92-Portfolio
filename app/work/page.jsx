@@ -177,7 +177,7 @@ const Works = () => {
                 href={featuredProject.live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full border border-[var(--border-soft)] bg-white/70 px-6 py-3 text-center font-bold text-[var(--text)] hover:-translate-y-0.5 hover:bg-white dark:bg-white/6 dark:text-[var(--text)]"
+                className="rounded-full border border-[var(--border-soft)] bg-white/70 px-6 py-3 text-center font-bold text-[var(--text)] hover:-translate-y-0.5 hover:bg-white hover:text-black dark:bg-white/6 dark:text-[var(--text)]"
               >
                 Live Site
               </a>
@@ -193,7 +193,7 @@ const Works = () => {
               className="glass-panel group relative overflow-hidden rounded-[2rem]"
             >
               {project.isNew && (
-                <span className="absolute left-[-34px] top-6 z-10 rotate-[-35deg] rounded-full bg-[var(--highlight)] px-10 py-1 text-xs font-bold tracking-[0.2em] text-[#1d1607]">
+                <span className="absolute left-[-25px] top-4 z-10 rotate-[-40deg] bg-red-700 px-10 py-1 text-xs font-bold tracking-[0.2em] text-white">
                   NEW
                 </span>
               )}
@@ -239,7 +239,7 @@ const Works = () => {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 rounded-full border border-[var(--border-soft)] bg-white/70 px-4 py-2 text-center text-sm font-bold text-[var(--text)] hover:bg-white dark:bg-white/6 dark:text-[var(--text)]"
+                    className="flex-1 rounded-full border border-[var(--border-soft)] bg-white/70 px-4 py-2 text-center text-sm font-bold text-[var(--text)] hover:bg-white hover:text-black dark:bg-white/6 dark:text-[var(--text)]"
                   >
                     Live
                   </a>
@@ -257,7 +257,7 @@ const Works = () => {
               className="glass-panel group relative overflow-hidden rounded-[2rem]"
             >
               {design.isNew && (
-                <span className="absolute left-[-34px] top-6 z-10 rotate-[-35deg] rounded-full bg-[var(--highlight)] px-10 py-1 text-xs font-bold tracking-[0.2em] text-[#1d1607]">
+                <span className="absolute left-[-25px] top-4 z-10 rotate-[-40deg] bg-red-700 px-10 py-1 text-xs font-bold tracking-[0.2em] text-white">
                   NEW
                 </span>
               )}
