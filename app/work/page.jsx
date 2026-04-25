@@ -12,7 +12,6 @@ const featuredProject = {
     { name: "React", color: "bg-sky-100 text-sky-700" },
     { name: "Next.js", color: "bg-gray-200 text-gray-900" },
     { name: "Tailwind CSS", color: "bg-cyan-100 text-cyan-700" },
-    { name: "Framer Motion", color: "bg-pink-100 text-pink-700" },
   ],
   github: "https://github.com/DakotaK92/DakotaK92-Portfolio",
   live: "https://dakotavking.dev",
@@ -56,7 +55,7 @@ const projects = [
       "A personal portfolio built to showcase both frontend development and design work through a more polished, brand-aware experience.",
     image: "/assets/work/development-image-3.jpg",
     tools: [
-      { name: "Framer Motion", color: "bg-pink-100 text-pink-700" },
+      { name: "React", color: "bg-sky-100 text-sky-700" },
       { name: "Next.js", color: "bg-gray-200 text-gray-900" },
       { name: "Tailwind CSS", color: "bg-cyan-100 text-cyan-700" },
     ],
