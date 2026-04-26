@@ -40,6 +40,11 @@ const Footer = () => {
               </Link>
             </li>
             <li>
+              <Link href="/services" className="text-[var(--text)] transition-colors duration-200 hover:text-[var(--accent)]">
+                Services
+              </Link>
+            </li>
+            <li>
               <Link href="/contact" className="text-[var(--text)] transition-colors duration-200 hover:text-[var(--accent)]">
                 Contact
               </Link>
