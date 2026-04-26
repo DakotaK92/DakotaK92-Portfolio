@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 const featuredProject = {
   title: "Dakota King Portfolio",
@@ -109,14 +108,7 @@ const designs = [
 
 const Works = () => {
   return (
-    <section
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: { delay: 1.5, duration: 0.4, ease: "easeIn" },
-      }}
-      className="page-shell w-full px-4 py-16 md:px-6"
-    >
+    <section className="page-shell w-full px-4 py-16 md:px-6">
       <section className="section-wrap max-w-7xl">
         <div className="mb-8 max-w-3xl">
           <span className="section-kicker">Selected Work</span>
