@@ -7,7 +7,7 @@
 
   --text: #f7f1e6;
   --muted-text: #b7c3d9;
-  --accent-text: #f0be59;
+  --accent-text: #fbbf24;
 
   --button-text: #08111f;
   --border-soft: rgba(240, 241, 245, 0.12);
@@ -15,10 +15,10 @@
   --panel-strong: #102038;
   --shadow: 0 28px 70px rgba(2, 8, 23, 0.42);
 
-  --accent: #f0be59;
+  --accent: #fbbf24;
   --accent-hover: #ffd68b;
   --accent-soft: rgba(240, 190, 89, 0.16);
-  --highlight: #8ab4f8;
+  --highlight: #fbbf24;
   --highlight-soft: rgba(138, 180, 248, 0.16);
 }
 

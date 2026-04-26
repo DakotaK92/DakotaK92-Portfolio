@@ -33,7 +33,6 @@ const Stats = () => {
             {stats.map((item, index) => {
                 return (
                     <div className="glass-panel rounded-[1.75rem] px-6 py-6" key={index}>
-                        <div className="mb-3 h-1.5 w-14 rounded-full bg-[var(--highlight)]" />
                         <div className="flex items-end gap-2">
                           <CountUp
                               end={item.num}
