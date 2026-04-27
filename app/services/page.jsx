@@ -74,7 +74,7 @@ export default function ServicesPage() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-[var(--accent)] text-[var(--button-text)] shadow-lg hover:-translate-y-0.5 hover:bg-[var(--accent-hover)]"
+                  className="bg-[var(--accent)] text-[var(--button-text)] shadow-lg hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] hover:text-black"
                 >
                   <Link href="/contact" className="flex items-center gap-2">
                     Start a Project

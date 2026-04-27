@@ -212,7 +212,7 @@ const Resume = () => {
                   <ul className="mx-auto mt-2 grid max-w-[680px] grid-cols-1 gap-6 xl:mx-0 xl:grid-cols-2">
                     {about.info.map((item,index) => {
                       return (
-                        <li key={index} className="glass-panel flex items-center justify-center gap-4 rounded-[1.25rem] px-6 py-5 xl:justify-start">
+                        <li key={index} className="glass-panel flex items-center justify-center gap-4 rounded-[1.25rem] px-4 py-5 xl:justify-start">
                           <span className="font-semibold text-[var(--text)]">{item.fieldName}</span>
                           <span className="text-xl text-[var(--accent)]">{item.fieldValue}</span>
                         </li>

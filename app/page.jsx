@@ -81,7 +81,7 @@ export default function Home() {
             </p>
           </article>
 
-          <article className="solid-panel rounded-[2rem] p-6 text-[var(--text)]">
+          <article className="glass-panel rounded-[2rem] p-6">
             <p className="text-sm font-bold uppercase tracking-[0.24em] text-[var(--accent-text)]">Open to Work</p>
             <h2 className="mt-3 text-2xl font-black">Available for freelance and creative dev projects.</h2>
             <p className="mt-3 leading-7 text-[var(--muted-text)]">

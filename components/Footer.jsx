@@ -57,7 +57,7 @@ const Footer = () => {
                 href="https://github.com/dakotak92"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border-soft)] bg-white/60 text-[var(--accent)] shadow-lg hover:-translate-y-0.5 hover:bg-[var(--accent)] hover:text-[var(--button-text)] dark:bg-white/6"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border-soft)] bg-glass-panel text-[var(--accent)] shadow-lg hover:-translate-y-0.5 hover:bg-[var(--accent)] hover:text-[var(--button-text)]"
               >
                 <span className="sr-only">GitHub</span>
                 <FaGithub className="w-6 h-6" />
@@ -69,7 +69,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/dakotaking92/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border-soft)] bg-white/60 text-[var(--accent)] shadow-lg hover:-translate-y-0.5 hover:bg-[var(--accent)] hover:text-[var(--button-text)] dark:bg-white/6"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border-soft)] bg-glass-panel text-[var(--accent)] shadow-lg hover:-translate-y-0.5 hover:bg-[var(--accent)] hover:text-[var(--button-text)]"
               >
                 <span className="sr-only">LinkedIn</span>
                 <FaLinkedin className="w-6 h-6" />
@@ -81,7 +81,7 @@ const Footer = () => {
                 href="https://www.behance.net/dakotaking"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border-soft)] bg-white/60 text-[var(--accent)] shadow-lg hover:-translate-y-0.5 hover:bg-[var(--accent)] hover:text-[var(--button-text)] dark:bg-white/6"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border-soft)] bg-glass-panel text-[var(--accent)] shadow-lg hover:-translate-y-0.5 hover:bg-[var(--accent)] hover:text-[var(--button-text)]"
               >
                 <span className="sr-only">Behance</span>
                 <FaBehanceSquare className="w-6 h-6" />
