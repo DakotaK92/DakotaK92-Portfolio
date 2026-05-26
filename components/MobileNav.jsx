@@ -34,7 +34,7 @@ const MobileNav = () => {
             alt="Dakota King logo"
             width={224}
             height={57}
-            className="w-56 p-2"
+            className="h-auto w-56 p-2"
           />
         </Link>
 

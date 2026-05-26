@@ -57,7 +57,7 @@ const Contact = () => {
 
             <div className="mt-8 grid gap-4">
               {info.map((item, index) => (
-                <div key={index} className="rounded-[1.5rem] border border-[var(--border-soft)] bg-white/60 p-4 dark:bg-white/6">
+                <div key={index} className="rounded-[1.5rem] border border-[var(--border-soft)] bg-white/6 p-4">
                   <div className="flex items-center gap-4">
                     <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[var(--accent)] text-[var(--button-text)]">
                       <div className="text-xl">{item.icon}</div>
