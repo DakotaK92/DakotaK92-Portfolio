@@ -182,7 +182,7 @@ const Works = () => {
                 href={featuredProject.live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full border border-[var(--border-soft)] bg-white/70 px-6 py-3 text-center font-bold text-[var(--text)] hover:-translate-y-0.5 hover:bg-white hover:text-black dark:bg-white/6 dark:text-[var(--text)]"
+                className="rounded-full border border-[var(--border-soft)] bg-white/6 px-6 py-3 text-center font-bold text-[var(--text)] hover:-translate-y-0.5 hover:bg-white hover:text-black"
               >
                 Live Site
               </a>
@@ -244,7 +244,7 @@ const Works = () => {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 rounded-full border border-[var(--border-soft)] bg-white/70 px-4 py-2 text-center text-sm font-bold text-[var(--text)] hover:bg-white hover:text-black dark:bg-white/6 dark:text-[var(--text)]"
+                    className="flex-1 rounded-full border border-[var(--border-soft)] bg-white/6 px-4 py-2 text-center text-sm font-bold text-[var(--text)] hover:bg-white hover:text-black"
                   >
                     Live
                   </a>

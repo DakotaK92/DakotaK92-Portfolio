@@ -37,7 +37,7 @@ export default function Home() {
                 </Link>
               </Button>
 
-              <Button size="lg" asChild className="border border-[var(--border-soft)] bg-white/70 text-[var(--text)] shadow-none hover:-translate-y-0.5 hover:bg-white hover:text-black dark:bg-white/6 dark:text-[var(--text)]">
+              <Button size="lg" asChild className="border border-[var(--border-soft)] bg-white/6 text-[var(--text)] shadow-none hover:-translate-y-0.5 hover:bg-white hover:text-black">
                 <Link href="/work">View Selected Work</Link>
               </Button>
             </div>
