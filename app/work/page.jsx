@@ -3,17 +3,23 @@
 import Image from "next/image";
 
 const featuredProject = {
-  title: "Dakota King Portfolio",
+  title: "Duncanville Bookstore App",
   description:
-    "A self-directed portfolio redesign focused on clearer hierarchy, stronger visual storytelling, and a more editorial presentation of both development and design work.",
-  video: "/assets/intro-videob_1.mp4",
+    "A mobile app concept for browsing events, tracking rewards, and making it easier for comic fans to stay connected with a local shop.",
+  videoEmbed: "https://www.youtube.com/embed/0wVmk9IaqhQ",
   tools: [
-    { name: "React", color: "bg-sky-100 text-sky-700" },
-    { name: "Next.js", color: "bg-gray-200 text-gray-900" },
-    { name: "Tailwind CSS", color: "bg-cyan-100 text-cyan-700" },
+    { name: "Expo", color: "bg-sky-100 text-sky-700" },
+      { name: "React-Native", color: "bg-sky-100 text-sky-700" },
+      { name: "React", color: "bg-sky-100 text-sky-700" },
+      { name: "Tailwind CSS", color: "bg-cyan-100 text-cyan-700" },
+      { name: "Nativewind CSS", color: "bg-cyan-100 text-cyan-700" },
+      { name: "Clerk-Expo", color: "bg-red-200 text-black" },
+      { name: "Axios", color: "bg-yellow-100 text-black" },
+      { name: "Tanstack", color: "bg-purple-300 text-black" },
+      { name: "Expo-Image", color: "bg-pink-200 text-black" },
   ],
-  github: "https://github.com/DakotaK92/DakotaK92-Portfolio",
-  live: "https://dakotavking.dev",
+  github: "https://github.com/DakotaK92/DuncanvilleComics-ReactNative",
+    live: "https://www.youtube.com/embed/0wVmk9IaqhQ",
 };
 
 const projects = [
@@ -130,15 +136,13 @@ const Works = () => {
 
         <div className="glass-panel soft-grid mb-20 grid grid-cols-1 gap-12 overflow-hidden rounded-[2.25rem] p-6 md:p-8 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="relative overflow-hidden rounded-[1.75rem] bg-[#07111f]">
-            <video
-              src={featuredProject.video}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="h-full min-h-[280px] w-full object-cover"
+            <iframe
+              src={featuredProject.videoEmbed}
+              title={`${featuredProject.title} featured video`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="h-full min-h-[280px] w-full"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#07111f]/70 via-transparent to-transparent" />
           </div>
 
           <div className="flex flex-col justify-center text-[var(--text)]">
